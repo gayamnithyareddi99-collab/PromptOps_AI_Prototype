@@ -637,130 +637,16 @@ button,input,select,textarea{font-family:var(--fb)}
 .f-badge{padding:3px 9px;border-radius:20px;background:rgba(143,87,240,0.07);border:1px solid rgba(143,87,240,0.14);font-family:var(--fm);font-size:.49rem;color:rgba(182,142,248,0.42)}
 
 /* ============================
-   RESPONSIVE 900px & below
-   Desktop layout unchanged above 900px
+   RESPONSIVE 900px & below — structural
+   (full mobile styles in comprehensive block below)
 ============================ */
 @media(max-width:900px){
-  /* ── Sidebar / Nav ── */
+  /* ── Critical structure: hide sidebar, show mobile nav ── */
   .sb{display:none}
   .main{margin-left:0;padding-bottom:calc(64px + env(safe-area-inset-bottom,0px));padding-top:60px}
   .m-top{display:flex}
   .m-bottom{display:flex}
-
-  /* ── Topbar ── */
-  .topbar{padding:0 14px;height:48px}
-  .tb-ttl{font-size:.72rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
-  .tb-right{gap:5px}
-  .topbar-btn{padding:5px 10px;font-size:.66rem}
-  .chip{font-size:.48rem;padding:2px 7px}
-
-  /* ── Section padding ── */
-  .sec{padding:28px 16px}
-
-  /* ── Hero ── */
-  .hero{padding:30px 16px 26px}
-  .hero-grid{grid-template-columns:1fr;gap:22px}
-  .hero h1{font-size:1.6rem;line-height:1.15}
-  .hero-sub{font-size:.82rem;margin-bottom:20px;max-width:100%}
-  .hero-btns{flex-wrap:wrap;gap:10px}
-  .btn-primary,.btn-ghost{width:100%;text-align:center;justify-content:center;padding:11px 18px}
-  .hero-metrics{font-size:.6rem;gap:4px 12px}
-  .hero-orb-1{width:200px;height:200px}
-  .hero-orb-2{width:120px;height:120px}
-
-  /* ── Hero dashboard ── */
-  .h-dashboard{padding:16px}
-  .metrics-2x2{grid-template-columns:1fr 1fr;gap:7px}
-  .m-val{font-size:1.1rem}
-
-  /* ── Section headings ── */
-  .sec-hd{margin-bottom:22px}
-  .sec-hd h2{font-size:1.1rem}
-
-  /* ── Grid overrides ── */
-  .grid-4{grid-template-columns:1fr 1fr;gap:12px}
-  .grid-3{grid-template-columns:1fr 1fr;gap:14px}
-  .grid-2,.grid-2-3,.grid-3-2{grid-template-columns:1fr;gap:18px}
-
-  /* ── KPI banner ── */
-  .kpi-grid{grid-template-columns:repeat(3,1fr);gap:8px}
-  .kpi-val{font-size:1.1rem}
-
-  /* ── Cards ── */
-  .card{padding:18px 16px}
-  .card-dark{padding:16px}
-
-  /* ── Stat cards ── */
-  .stat-card{padding:18px 14px}
-  .stat-val{font-size:1.5rem}
-
-  /* ── Chart panels ── */
-  .ch-panel{padding:16px}
-  .ch-canvas{overflow-x:auto}
-
-  /* ── Comparison table ── */
-  .cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .cmp-tbl{min-width:560px;font-size:.7rem}
-  .cmp-tbl th,.cmp-tbl td{padding:8px 10px}
-
-  /* ── Financial table ── */
-  .fin-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .fin-tbl{min-width:480px;font-size:.72rem}
-  .fin-tbl th,.fin-tbl td{padding:8px 12px}
-
-  /* ── Pricing ── */
-  .price-grid{grid-template-columns:1fr;gap:16px}
-  .price-card{padding:22px 18px}
-
-  /* ── Region / demo / layers ── */
-  .region-grid{grid-template-columns:1fr}
-  .demo-layout{grid-template-columns:1fr}
-  .layer-stack{gap:8px}
-  .layer{padding:16px}
-
-  /* ── Timeline ── */
-  .timeline{padding-left:20px}
-  .tl-item{padding-left:16px}
-
-  /* ── Testimonials ── */
-  .testi-card{padding:18px}
-
-  /* ── Progress bars ── */
-  .prog-lbl{font-size:.68rem}
-
-  /* ── DNA rows / impl services ── */
-  .dna-row{flex-wrap:wrap;gap:8px}
-
-  /* ── Footer ── */
-  .footer{padding:32px 18px 20px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:22px}
-  .footer-bottom{flex-direction:column;align-items:flex-start;gap:10px}
-
-  /* ── AI Fab / Panel ── */
-  .ai-fab{bottom:80px;right:16px;width:48px;height:48px}
-  .ai-panel{bottom:140px;width:calc(100vw - 32px);right:16px;max-height:380px}
-
-  /* ── Inline flex risk rows ── */
-  [style*="display:flex;align-items:flex-start;gap:16px"]{flex-direction:column;gap:10px !important}
-  [style*="width:120px"]{width:100% !important}
-
-  /* ── Skill grid inside kpi-banner ── */
-  .kpi-banner [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
-
-  /* ── Moat/ESG/Risk cards with flex rows ── */
-  [style*="display:flex;align-items:center;gap:10px;margin-bottom:12px"]{flex-wrap:wrap}
-
-  /* ── Prior work list in Founder ── */
-  [style*="display:flex;flex-direction:column;gap:10px"] [style*="display:flex;gap:12px"]{gap:8px !important}
-
-  /* ── Implementation services grid ── */
-  [style*="grid-template-columns:1fr 1fr;gap:24px"]{grid-template-columns:1fr !important;gap:18px !important}
-
-  /* ── ESG social / env grid inside grid-2 ── */
-  .sec-muted .grid-2{gap:14px}
-
-  /* ── Overview KPI banner kpi-grid 5-col → 3-col ── */
-  .kpi-banner .kpi-grid{grid-template-columns:repeat(3,1fr)}
+  .topbar{height:48px}
 }
 
 /* ── Extra small: 480px and below ── */
@@ -783,6 +669,206 @@ button,input,select,textarea{font-family:var(--fb)}
   .grid-3.moat-phases{grid-template-columns:1fr}
   /* ESG compliance grid ── */
   .grid-3.esg-principles{grid-template-columns:1fr}
+}
+
+/* ============================
+   COMPREHENSIVE MOBILE — 900px
+   All sections polished
+============================ */
+@media(max-width:900px){
+
+  /* ── Topbar overflow fix ── */
+  .topbar{padding:0 10px;gap:6px;overflow:hidden}
+  .tb-left{min-width:0;flex:1;overflow:hidden}
+  .tb-ttl{font-size:.68rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px}
+  .tb-sub{display:none}
+  .tb-right{flex-shrink:0;gap:4px}
+  .chip{font-size:.44rem;padding:2px 6px}
+  .topbar-btn{padding:5px 9px;font-size:.63rem}
+
+  /* ── Hero improvements ── */
+  .hero{padding:26px 14px 24px}
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .hero h1{font-size:1.55rem;line-height:1.15}
+  .hero-sub{font-size:.8rem;margin-bottom:18px;max-width:100%}
+  .hero-btns{flex-direction:column;gap:9px}
+  .btn-primary,.btn-ghost{width:100%;text-align:center;justify-content:center;padding:12px 18px;font-size:.82rem}
+  .hero-metrics{flex-wrap:wrap;gap:4px 10px;font-size:.58rem}
+  .hero-orb-1{width:180px;height:180px;top:-40px;right:-30px}
+  .hero-orb-2{width:100px;height:100px}
+  .hero-orb-3{display:none}
+  .hero-tags{gap:5px}
+  .htag{font-size:.58rem;padding:3px 9px}
+
+  /* ── Hero dashboard ── */
+  .h-dashboard{padding:14px;margin-top:4px}
+  .metrics-2x2{grid-template-columns:1fr 1fr;gap:7px}
+  .m-val{font-size:1.05rem}
+  .m-lbl{font-size:.6rem}
+  .h-db-head{margin-bottom:12px}
+  .h-db-title{font-size:.72rem}
+
+  /* ── Section layout ── */
+  .sec{padding:24px 14px}
+  .sec-hd{margin-bottom:18px}
+  .sec-hd h2{font-size:1.05rem;line-height:1.25}
+  .sec-hd p{font-size:.78rem}
+  .eyebrow{font-size:.52rem}
+
+  /* ── Cards ── */
+  .card{padding:16px 14px}
+  .card-dark{padding:14px}
+  .c-icon{width:36px;height:36px;border-radius:10px}
+  .c-icon svg{width:16px;height:16px}
+  .c-num{font-size:.54rem}
+
+  /* ── KPI banner ── */
+  .kpi-banner{padding:20px 14px}
+  .kpi-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+  .kpi-card{padding:14px 10px}
+  .kpi-val{font-size:1.1rem}
+  .kpi-lbl{font-size:.58rem}
+  .kpi-sub{font-size:.54rem}
+
+  /* ── Stat cards ── */
+  .stat-card{padding:16px 12px}
+  .stat-val{font-size:1.4rem}
+  .stat-lbl{font-size:.68rem}
+  .stat-sub{font-size:.6rem}
+
+  /* ── Chart panels ── */
+  .ch-panel{padding:14px 12px}
+  .ch-title{font-size:.78rem}
+  .ch-sub{font-size:.6rem}
+  .ch-canvas{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  /* ── Pills / chips ── */
+  .pill{font-size:.58rem;padding:3px 9px}
+
+  /* ── Grid overrides ── */
+  .grid-4{grid-template-columns:1fr 1fr;gap:10px}
+  .grid-3{grid-template-columns:1fr 1fr;gap:12px}
+  .grid-2,.grid-2-3,.grid-3-2{grid-template-columns:1fr;gap:16px}
+
+  /* ── Comparison table ── */
+  .cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r)}
+  .cmp-tbl{min-width:540px;font-size:.67rem}
+  .cmp-tbl th,.cmp-tbl td{padding:7px 9px;white-space:nowrap}
+  .cmp-tbl th:first-child,.cmp-tbl td:first-child{white-space:normal;min-width:130px}
+
+  /* ── Financial table ── */
+  .fin-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .fin-tbl{min-width:460px;font-size:.7rem}
+  .fin-tbl th,.fin-tbl td{padding:7px 11px}
+
+  /* ── Pricing ── */
+  .price-grid{grid-template-columns:1fr;gap:14px;max-width:480px;margin:0 auto}
+  .price-card{padding:20px 16px}
+  .pc-price{font-size:1.85rem}
+  .pc-tier{font-size:.62rem}
+  .pc-desc{font-size:.73rem}
+  .pc-features li{font-size:.72rem;padding:5px 0}
+
+  /* ── Features ── */
+  .feat-item{gap:14px;padding:18px 0}
+  .feat-ic{width:44px;height:44px;border-radius:11px;flex-shrink:0}
+  .feat-ic svg{width:18px;height:18px}
+  .feat-body h3{font-size:.9rem}
+  .feat-body p{font-size:.76rem}
+
+  /* ── Demo section ── */
+  .demo-layout{grid-template-columns:1fr;gap:16px}
+  .demo-pipe{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;gap:0}
+  .pipe-node{min-width:90px;padding:0 4px}
+  .pipe-circle{width:44px;height:44px;font-size:.8rem;margin-bottom:8px}
+  .pipe-node h4{font-size:.65rem}
+  .pipe-node p{font-size:.56rem}
+  .demo-body{padding:14px;min-height:auto}
+  .demo-input{font-size:.76rem;padding:10px 12px}
+  .demo-btn{padding:8px 13px;font-size:.7rem}
+  .demo-actions{gap:6px;margin:10px 0}
+  .demo-output{font-size:.73rem;padding:12px}
+  .dna-row{padding:9px 10px;gap:8px}
+  .dna-nm{font-size:.72rem}
+  .dna-ds{font-size:.62rem}
+
+  /* ── Layers ── */
+  .layer-stack{gap:8px}
+  .layer{padding:14px}
+  .layer h3{font-size:.88rem}
+  .layer p{font-size:.73rem}
+  .lf-chip{font-size:.55rem;padding:3px 8px}
+  .layer-note{font-size:.66rem}
+
+  /* ── Timeline ── */
+  .timeline{padding-left:22px}
+  .timeline::before{left:8px}
+  .tl-item{margin-bottom:20px}
+  .tl-dot{left:-24px;width:14px;height:14px}
+  .tl-yr{font-size:.52rem}
+  .tl-title{font-size:.86rem}
+  .tl-desc{font-size:.73rem}
+
+  /* ── Testimonials ── */
+  .testi-card{padding:16px}
+  .testi-quote{font-size:.76rem}
+  .testi-nm{font-size:.74rem}
+  .testi-role{font-size:.6rem}
+
+  /* ── Progress bars ── */
+  .prog-lbl{font-size:.65rem}
+  .prog-val{font-size:.65rem}
+
+  /* ── Region grid ── */
+  .region-grid{grid-template-columns:1fr;gap:10px}
+  .region-card{padding:14px}
+  .region-card h4{font-size:.78rem}
+  .region-card ul li{font-size:.68rem}
+
+  /* ── Footer ── */
+  .footer{padding:28px 14px 18px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:18px}
+  .footer-brand p{font-size:.72rem}
+  .footer-col h4{font-size:.76rem;margin-bottom:10px}
+  .footer-col a{font-size:.7rem;margin-bottom:6px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px}
+  .footer-badges-row{flex-wrap:wrap;gap:5px}
+  .f-badge{font-size:.46rem}
+  .footer-copy{font-size:.52rem}
+
+  /* ── AI chat widget ── */
+  .ai-fab{bottom:76px;right:14px;width:46px;height:46px}
+  .ai-fab svg{width:19px;height:19px}
+  .ai-panel{bottom:134px;width:calc(100vw - 28px);right:14px;max-height:370px}
+  .ai-head{padding:12px 14px}
+  .ai-head-nm{font-size:.78rem}
+  .ai-msg{font-size:.71rem;padding:8px 10px}
+  .ai-sug{font-size:.6rem;padding:4px 8px}
+  .ai-input{font-size:.71rem;padding:7px 10px}
+
+  /* ── Inline flex rows with hardcoded styles ── */
+  [style*="display:flex;align-items:flex-start;gap:16px"]{flex-direction:column !important;gap:10px !important}
+  [style*="width:120px"]{width:100% !important}
+  [style*="grid-template-columns:1fr 1fr;gap:24px"]{grid-template-columns:1fr !important;gap:14px !important}
+  [style*="grid-template-columns:1fr 1fr;gap:13px"]{grid-template-columns:1fr !important;gap:10px !important}
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr !important}
+  [style*="grid-template-columns:1.8fr 1fr 1fr 1fr"]{grid-template-columns:1fr 1fr !important}
+
+  /* ── Typography scale down ── */
+  h1{font-size:clamp(1.35rem,4vw,1.65rem)}
+  h2{font-size:clamp(1rem,3vw,1.2rem)}
+  h3{font-size:.92rem}
+  p{font-size:.82rem}
+
+  /* ── Moat / ESG / Risk card flex rows ── */
+  [style*="display:flex;align-items:center;gap:10px;margin-bottom:12px"]{flex-wrap:wrap;gap:7px !important}
+  .kpi-banner [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}
+
+  /* ── Prevent horizontal overflow ── */
+  img,canvas,iframe,video{max-width:100% !important}
+  pre,code{overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+  .sec-muted .grid-2{gap:14px}
+  .kpi-banner .kpi-grid{grid-template-columns:repeat(3,1fr)}
 }
 
 /* ============================
@@ -1102,21 +1188,22 @@ button,input,select,textarea{font-family:var(--fb)}
       <div>
         <div class="sec-hd" style="margin-bottom:18px"><div class="eyebrow">Live Feed</div><h2>Platform Activity</h2></div>
         <div class="activity">
-          <div class="act-item"><div class="act-dot v"></div><div><div class="act-msg">Logic fingerprint saved Senior Dev workflow (Recruitment Outreach)</div><div class="act-ts">2 min ago · Logic Core</div></div></div>
+          <div class="act-item"><div class="act-dot v"></div><div><div class="act-msg">Logic fingerprint saved Senior Dev workflow (Client Proposal)</div><div class="act-ts">2 min ago · Logic Core</div></div></div>
           <div class="act-item"><div class="act-dot g"></div><div><div class="act-msg">PFFE alert resolved Hallucination detected & corrected in 0.8s</div><div class="act-ts">7 min ago · DNA Architect</div></div></div>
-          <div class="act-item"><div class="act-dot i"></div><div><div class="act-msg">New hire onboarded via Workflow DNA proficiency in 11 days</div><div class="act-ts">1 hour ago · DNA Architect</div></div></div>
+          <div class="act-item"><div class="act-dot i"></div><div><div class="act-msg">Workflow DNA deployed  team member reached proficiency in 11 days</div><div class="act-ts">1 hour ago · DNA Architect</div></div></div>
           <div class="act-item"><div class="act-dot w"></div><div><div class="act-msg">OLM report generated £3,200 productivity value identified</div><div class="act-ts">3 hours ago · Logic Sovereign</div></div></div>
           <div class="act-item"><div class="act-dot c"></div><div><div class="act-msg">CLN benchmark updated 12 new workflow patterns added</div><div class="act-ts">Today · Community Network</div></div></div>
         </div>
       </div>
       <div>
         <div class="sec-hd" style="margin-bottom:18px"><div class="eyebrow">Survey Intelligence</div><h2>Market Validation</h2></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Value Workflow Saving</span><span class="prog-pct" style="color:var(--v3)">85.1%</span></div><div class="prog-track"><div class="prog-fill pf-violet" style="width:85.1%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Want Auto Prompt Improvement</span><span class="prog-pct" style="color:var(--ok)">89.9%</span></div><div class="prog-track"><div class="prog-fill pf-green" style="width:89.9%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Likely / Very Likely to Adopt</span><span class="prog-pct" style="color:var(--ind)">85.3%</span></div><div class="prog-track"><div class="prog-fill pf-indigo" style="width:85.3%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Interested in Beta Program</span><span class="prog-pct" style="color:var(--ok)">85.9%</span></div><div class="prog-track"><div class="prog-fill pf-green" style="width:85.9%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Pay £100–£500 Budget/Month</span><span class="prog-pct" style="color:var(--warn)">66.1%</span></div><div class="prog-track"><div class="prog-fill pf-warm" style="width:66.1%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">AI Failure Analytics Valuable</span><span class="prog-pct" style="color:var(--cyan)">81.3%</span></div><div class="prog-track"><div class="prog-fill pf-cyan" style="width:81.3%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Value Workflow Saving (Q10)</span><span class="prog-pct" style="color:var(--v3)">88.7%</span></div><div class="prog-track"><div class="prog-fill pf-violet" style="width:88.7%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Want Auto Prompt Improvement (Q15)</span><span class="prog-pct" style="color:var(--ok)">83.7%</span></div><div class="prog-track"><div class="prog-fill pf-green" style="width:83.7%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Likely / Very Likely to Adopt (Q18)</span><span class="prog-pct" style="color:var(--ind)">85.3%</span></div><div class="prog-track"><div class="prog-fill pf-indigo" style="width:85.3%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Interested in Beta Program (Q21)</span><span class="prog-pct" style="color:var(--ok)">85.9%</span></div><div class="prog-track"><div class="prog-fill pf-green" style="width:85.9%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Pay £100–£500 Budget/Month (Q20)</span><span class="prog-pct" style="color:var(--warn)">66.1%</span></div><div class="prog-track"><div class="prog-fill pf-warm" style="width:66.1%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">AI Failure Analytics Valuable (Q16)</span><span class="prog-pct" style="color:var(--cyan)">81.3%</span></div><div class="prog-track"><div class="prog-fill pf-cyan" style="width:81.3%"></div></div></div>
+        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">AI Output Inconsistency Problem (Q7)</span><span class="prog-pct" style="color:var(--red)">76.8%</span></div><div class="prog-track"><div class="prog-fill" style="width:76.8%;background:linear-gradient(90deg,var(--red),#f87171);border-radius:4px"></div></div></div>
       </div>
     </div>
   </div>
@@ -1151,7 +1238,7 @@ button,input,select,textarea{font-family:var(--fb)}
         <h1>The <span class="hl">£50B AI<br/>Value Gap</span><br/>Destroying SMEs</h1>
         <p class="hero-sub"><strong>85% of UK SMEs experiment with AI</strong> but only 29% integrate it successfully. This disconnect generates £50B in global annual losses from hallucinations and "quiet failures."</p>
         <div class="hero-btns"><button class="btn-primary" onclick="nav('solution')">See Our Solution</button><button class="btn-ghost" onclick="nav('market')">Survey Evidence →</button></div>
-        <div class="hero-metrics"><span>30% productivity tax</span><span>84% rely on manual checking</span><span>34% logic loss on exit</span></div>
+        <div class="hero-metrics"><span>30% productivity tax</span><span>84% rely on manual checking</span><span>34% workflow logic degradation</span></div>
       </div>
       <div class="h-dashboard">
         <div class="h-db-head"><span class="h-db-title">Gap Metrics</span><span class="h-db-live" style="border-color:rgba(224,59,59,0.22);color:var(--red);background:rgba(224,59,59,0.07)">⚠ Critical</span></div>
@@ -1184,7 +1271,7 @@ button,input,select,textarea{font-family:var(--fb)}
         <div class="sec-hd"><div class="eyebrow">Structural Disparity</div><h2>Enterprise vs SME Reality</h2><p>Enterprises invest £250k+ in RAG pipelines. UK SMEs rely on ad-hoc browser hacks with zero governance or institutional memory.</p></div>
         <div class="grid-2" style="gap:14px">
           <div class="card"><div class="c-icon i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div><h3>Enterprise Reality</h3><p>Custom RAG pipelines £250k+, dedicated MLOps engineers £85–100k/yr, fine-tuned proprietary data.</p></div>
-          <div class="card" style="border-color:rgba(224,59,59,0.2)"><div class="c-icon w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/></svg></div><h3>SME Reality</h3><p>Ad-hoc browser hacks, severe logic loss on staff exit, 84% manual oversight, zero governance.</p></div>
+          <div class="card" style="border-color:rgba(224,59,59,0.2)"><div class="c-icon w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/></svg></div><h3>SME Reality</h3><p>Ad-hoc browser hacks, severe AI output inconsistency, zero governance, 84% manual oversight, zero governance.</p></div>
         </div>
       </div>
       <div>
@@ -1197,7 +1284,7 @@ button,input,select,textarea{font-family:var(--fb)}
   <div class="sec sec-dark">
     <div class="sec-hd"><div class="eyebrow" style="color:var(--v1)">Three Critical Failures</div><h2>Why SMEs Cannot Bridge the Gap Alone</h2></div>
     <div class="grid-3">
-      <div class="card card-dark animate-in"><div class="c-icon v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17H2a3 3 0 000 6h20a3 3 0 000-6zM6 17V7m6 10V3m6 14v-5"/></svg></div><h3>No Logic Retention</h3><p>When skilled staff leave, expert AI workflows vanish. 34% of AI friction stems directly from this "logic loss" during turnover.</p></div>
+      <div class="card card-dark animate-in"><div class="c-icon v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 17H2a3 3 0 000 6h20a3 3 0 000-6zM6 17V7m6 10V3m6 14v-5"/></svg></div><h3>No Logic Retention</h3><p>Without a governance layer, expert AI workflows are fragile and unretained. 34% of AI friction stems directly from this absence of structured logic preservation.</p></div>
       <div class="card card-dark animate-in"><div class="c-icon w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg></div><h3>Unmanaged Hallucinations</h3><p>82% of production bugs stem from AI hallucinations. Without forensic detection, errors reach clients causing legal and reputational risk.</p></div>
       <div class="card card-dark animate-in"><div class="c-icon i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Zero Governance Layer</h3><p>UK firms face rising ICO scrutiny. Without audit-ready chains and transparency logs, businesses face regulatory fines and reputational harm.</p></div>
     </div>
@@ -1252,25 +1339,25 @@ button,input,select,textarea{font-family:var(--fb)}
         <div class="layer-stack">
           <div class="layer top"><h3>🏆 Premium Agency Output</h3><p>Differentiated brand voices, secure codebase deployment, and zero-hallucination deliverables for UK professional clients.</p></div>
           <div class="layer mid"><h3>⚙ The PromptOps & Governance Layer</h3><p>Transforms transient, individual prompting skills into permanent, measurable organizational assets.</p><div class="layer-features"><span class="lf-chip">Logic Cloning</span><span class="lf-chip">Context Injection</span><span class="lf-chip">Repository Awareness</span><span class="lf-chip">Outcome Memory</span></div></div>
-          <div class="layer bot"><h3>⚡ Foundational Models (GPT-4, Claude, Gemini)</h3><p>Highly capable but probabilistically chaotic requiring governance to deliver consistent commercial value.</p></div>
+          <div class="layer bot"><h3>⚡ Foundational Models (GPT-4o, Claude Sonnet 4.6, Gemini 2.5, Llama 4)</h3><p>Highly capable but probabilistically chaotic requiring governance to deliver consistent commercial value.</p></div>
         </div>
         <div class="layer-note" style="margin-top:10px">Model-agnostic sits above any LLM. Businesses retain full provider flexibility.</div>
       </div>
       <div>
         <div class="ch-panel" style="margin-bottom:18px"><div class="ch-title">Closed-Loop Capability Radar</div><div class="ch-sub">PromptOps AI vs generic tools</div><div class="ch-canvas" style="height:200px"><canvas id="c-radar"></canvas></div></div>
-        <div class="card"><div class="c-num">Proprietary Core</div><h3>PromptOps AI Fingerprinting</h3><p>ML-powered capture of high-performing prompt DNA tone, structure, accuracy patterns cloned across teams. Junior staff achieve expert-level results instantly.</p><div style="margin-top:12px;display:flex;gap:7px;flex-wrap:wrap"><span class="pill pill-v">AI Fingerprinting</span><span class="pill pill-g">PFFE Engine</span><span class="pill pill-i">OLM System</span></div></div>
+        <div class="card"><div class="c-num">Proprietary Core</div><h3>PromptOps AI Fingerprinting</h3><p>ML-powered capture of high-performing prompt DNA  tone, structure, accuracy patterns cloned across teams. Any team member achieves expert-level results instantly.</p><div style="margin-top:12px;display:flex;gap:7px;flex-wrap:wrap"><span class="pill pill-v">AI Fingerprinting</span><span class="pill pill-g">PFFE Engine</span><span class="pill pill-i">OLM System</span></div></div>
       </div>
     </div>
   </div>
   <div class="sec sec-muted">
-    <div class="sec-hd"><div class="eyebrow">Onboarding Impact</div><h2>Workflow DNA Cloning Scale Without Diluting Quality</h2></div>
+    <div class="sec-hd"><div class="eyebrow">Workflow DNA Cloning</div><h2>Workflow DNA Cloning  Scale Without Diluting Quality</h2></div>
     <div class="grid-2">
       <div>
-        <div class="card" style="margin-bottom:16px;border-left:3px solid var(--warn)"><div class="c-icon w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/></svg></div><h3>The Operational Pain</h3><p>The founder is the bottleneck. Hiring juniors causes "logic loss." Unmanaged AI generates massive computational waste and expensive re-rendering.</p></div>
-        <div class="card" style="border-left:3px solid var(--ok)"><div class="c-icon g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>The LLMOps Cure</h3><p>Founders record their exact prompt sequences. Packaged logic lets new hires execute at founder-level standard immediately rapid scaling without quality dilution.</p></div>
+        <div class="card" style="margin-bottom:16px;border-left:3px solid var(--warn)"><div class="c-icon w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4M12 17h.01"/></svg></div><h3>The Operational Pain</h3><p>The founder is the operational bottleneck. Without structured workflow capture, institutional AI logic evaporates. Unmanaged AI generates massive computational waste and expensive re-rendering.</p></div>
+        <div class="card" style="border-left:3px solid var(--ok)"><div class="c-icon g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>The LLMOps Cure</h3><p>Founders record their exact prompt sequences as Workflow DNA. Packaged logic lets any team member execute at founder-level standard immediately  enabling rapid scaling without quality dilution.</p></div>
       </div>
       <div class="ch-panel">
-        <div class="ch-title">Onboarding Speed Comparison</div><div class="ch-sub">Days to workflow proficiency saves 31 days per hire</div>
+        <div class="ch-title">Workflow Proficiency Speed</div><div class="ch-sub">Days to full workflow proficiency  saves 31 days per team member</div>
         <div class="ch-canvas" style="height:180px"><canvas id="c-onboard"></canvas></div>
         <div style="text-align:center;margin-top:14px"><div style="font-family:var(--fh);font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--ok),#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.04em">31 Days Saved</div><div style="font-size:.73rem;color:var(--txd3)">14-day vs 45-day historical average</div></div>
       </div>
@@ -1315,12 +1402,12 @@ button,input,select,textarea{font-family:var(--fb)}
 
 <!-- ============================  PAGE: MARKET  ============================ -->
 <div class="page" id="p-market">
-  <div class="topbar"><div class="tb-left"><span class="tb-ttl">Market Research 182 Respondents, UK Professional Services</span></div><div class="tb-right"><span class="chip chip-ok">182 Responses</span><span class="chip chip-i">Validated</span></div></div>
+  <div class="topbar"><div class="tb-left"><span class="tb-ttl">Market Research 177 Respondents, UK Professional Services</span></div><div class="tb-right"><span class="chip chip-ok">177 Responses</span><span class="chip chip-i">Validated</span></div></div>
   <div class="hero">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-grid">
       <div>
-        <div class="hero-tags"><span class="htag green">● Survey Complete</span><span class="htag">182 UK Respondents</span><span class="htag blue">Validated Data</span></div>
+        <div class="hero-tags"><span class="htag green">● Survey Complete</span><span class="htag">177 UK Respondents</span><span class="htag blue">Validated Data</span></div>
         <h1>Market Validation<br/><span class="hl">Survey Results</span></h1>
         <p class="hero-sub">Comprehensive survey across UK IT, Consulting, and Professional Services confirming critical demand for PromptOps AI's governance platform.</p>
         <div class="hero-metrics"><span>85.3% likely to adopt</span><span>85.9% beta interest</span><span>42.9% pay £250–500/mo</span></div>
@@ -1337,10 +1424,14 @@ button,input,select,textarea{font-family:var(--fb)}
     </div>
   </div>
   <div class="sec sec-light">
-    <div class="sec-hd"><div class="eyebrow">Survey Intelligence</div><h2>Industry Profile & AI Usage (182 Respondents)</h2></div>
+    <div class="sec-hd"><div class="eyebrow">Survey Intelligence</div><h2>Industry Profile & AI Usage (177 Respondents)</h2></div>
     <div class="grid-2" style="margin-bottom:24px">
       <div class="ch-panel"><div class="ch-title">Industry Distribution</div><div class="ch-sub">Sector breakdown of survey respondents</div><div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-industry" style="max-height:200px"></canvas></div></div>
       <div class="ch-panel"><div class="ch-title">AI Usage Frequency</div><div class="ch-sub">How often does your team use AI tools?</div><div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-freq" style="max-height:200px"></canvas></div></div>
+    </div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="ch-panel"><div class="ch-title">Company Size Distribution</div><div class="ch-sub">Number of employees across respondents</div><div class="ch-canvas" style="height:180px"><canvas id="c-emp-size"></canvas></div></div>
+      <div class="ch-panel"><div class="ch-title">Top AI Use Cases</div><div class="ch-sub">What are the main AI use cases in your business?</div><div class="ch-canvas" style="height:180px"><canvas id="c-use-cases"></canvas></div></div>
     </div>
     <div class="grid-2">
       <div class="ch-panel"><div class="ch-title">Daily Time Correcting AI Errors</div><div class="ch-sub">49.5% spend 1–3 hours/day on manual corrections</div><div class="ch-canvas" style="height:180px"><canvas id="c-time"></canvas></div></div>
@@ -1360,6 +1451,43 @@ button,input,select,textarea{font-family:var(--fb)}
           <div style="font-size:.74rem;color:var(--txd2);margin-top:4px">Very Likely or Likely to Adopt</div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="sec sec-dark">
+    <div class="sec-hd"><div class="eyebrow" style="color:var(--v1)">Full Survey Data · 177 Respondents</div><h2>Deep Validation: Workflow Pain, AI Inconsistency &amp; Pricing Signals</h2><p style="color:rgba(182,142,248,0.6)">Comprehensive breakdown from the PromptOps AI Market Validation Survey across all 21 questions.</p></div>
+    <div class="grid-3" style="margin-bottom:24px">
+      <div class="card card-dark animate-in"><div class="c-num" style="color:var(--warn)">57.6%</div><h3>No Standardised Process</h3><p>Over half of organisations have <strong>no standardised process</strong> for storing and reusing successful AI workflows or prompts.</p></div>
+      <div class="card card-dark animate-in"><div class="c-num" style="color:var(--ok)">88.7%</div><h3>Workflow Saving Valued</h3><p><strong>Extremely or Valuable</strong>: automatically saving and reusing successful AI workflows  a core PromptOps AI feature.</p></div>
+      <div class="card card-dark animate-in"><div class="c-num" style="color:var(--red)">57.6%</div><h3>Experience Inconsistent AI</h3><p><strong>Very Often</strong> experience inconsistent or unreliable AI outputs  the core problem PromptOps AI governance directly solves.</p></div>
+    </div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">AI Inconsistency Frequency</div><div class="ch-sub" style="color:var(--tx3)">How often do you experience inconsistent AI outputs? (177 responses)</div><div class="ch-canvas" style="height:160px"><canvas id="c-inconsistency"></canvas></div></div>
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">Biggest AI Challenges</div><div class="ch-sub" style="color:var(--tx3)">Top pain points reported across 177 businesses</div><div class="ch-canvas" style="height:160px"><canvas id="c-challenges"></canvas></div></div>
+    </div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">Workflow Clone Utility Score</div><div class="ch-sub" style="color:var(--tx3)">If a platform cloned senior workflows for team members, how useful would that be?</div><div class="ch-canvas" style="height:160px"><canvas id="c-clone-utility"></canvas></div></div>
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">Preferred Pricing Model</div><div class="ch-sub" style="color:var(--tx3)">Which pricing model would you prefer? (177 responses)</div><div class="ch-canvas" style="height:160px"><canvas id="c-pricing-pref"></canvas></div></div>
+    </div>
+    <div class="grid-3" style="margin-bottom:24px">
+      <div class="card card-dark animate-in" style="border-left:3px solid var(--ok)">
+        <div style="font-family:var(--fm);font-size:.5rem;letter-spacing:.15em;color:var(--ok);margin-bottom:8px;text-transform:uppercase">Q15 · Auto-Improve Prompts</div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:var(--fh);color:var(--ok);margin-bottom:4px">58.8%</div>
+        <p style="color:rgba(182,142,248,0.7);margin:0">said <strong style="color:var(--tx1)">"Yes definitely"</strong> to a platform that automatically improves weak prompts and workflows over time.</p>
+      </div>
+      <div class="card card-dark animate-in" style="border-left:3px solid var(--v2)">
+        <div style="font-family:var(--fm);font-size:.5rem;letter-spacing:.15em;color:var(--v2);margin-bottom:8px;text-transform:uppercase">Q16 · Failure Analytics</div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:var(--fh);color:var(--v2);margin-bottom:4px">81.3%</div>
+        <p style="color:rgba(182,142,248,0.7);margin:0"><strong style="color:var(--tx1)">Extremely or Valuable</strong>: AI workflow analytics and "failure forensics" for their organisation.</p>
+      </div>
+      <div class="card card-dark animate-in" style="border-left:3px solid var(--ind)">
+        <div style="font-family:var(--fm);font-size:.5rem;letter-spacing:.15em;color:var(--ind);margin-bottom:8px;text-transform:uppercase">Q17 · Workflow Speed</div>
+        <div style="font-size:1.6rem;font-weight:900;font-family:var(--fh);color:var(--ind);margin-bottom:4px">85.9%</div>
+        <p style="color:rgba(182,142,248,0.7);margin:0"><strong style="color:var(--tx1)">Significantly or Moderately</strong>: reducing time-to-proficiency using reusable AI workflows would benefit their business.</p>
+      </div>
+    </div>
+    <div style="background:rgba(14,164,105,0.07);border:1px solid rgba(14,164,105,0.2);border-radius:var(--rl);padding:20px;text-align:center">
+      <div style="font-family:var(--fh);font-size:1.1rem;font-weight:900;color:var(--ok);margin-bottom:6px">86% Would Participate in Beta  Only 14.1% Said No</div>
+      <p style="font-size:.82rem;color:rgba(182,142,248,0.7);margin:0">60.5% said "Yes" + 25.4% said "Maybe" = <strong style="color:var(--tx1)">85.9% willing to pilot</strong> PromptOps AI. Strong demand signal from 177 validated UK professional service respondents.</p>
     </div>
   </div>
   <div class="sec sec-light">
@@ -1504,7 +1632,7 @@ button,input,select,textarea{font-family:var(--fb)}
     <div class="grid-4" style="margin-bottom:32px">
       <div class="stat-card animate-in"><div class="stat-val v">+28%</div><div class="stat-desc">Task Speed Increase</div><div class="stat-note">avg across pilot firms</div></div>
       <div class="stat-card animate-in"><div class="stat-val g">-18%</div><div class="stat-desc">Hallucination Reduction</div><div class="stat-note">forensic calibration</div></div>
-      <div class="stat-card animate-in"><div class="stat-val w">14d</div><div class="stat-desc">Onboarding Target</div><div class="stat-note">vs 45-day average</div></div>
+      <div class="stat-card animate-in"><div class="stat-val w">14d</div><div class="stat-desc">Workflow Proficiency</div><div class="stat-note">vs 45-day average</div></div>
       <div class="stat-card animate-in"><div class="stat-val i">4.3/5</div><div class="stat-desc">Logic Equity Score</div><div class="stat-note">user satisfaction</div></div>
     </div>
     <div class="grid-2">
@@ -1515,7 +1643,7 @@ button,input,select,textarea{font-family:var(--fb)}
         <div class="feat-item" style="border:none;padding-bottom:0"><div class="feat-ic i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="feat-body"><h3>Intent-to-Workflow Auto-Synthesis</h3><p>Automatically deconstructs a single business request into complex multi-step workflows. Zero manual prompt engineering required.</p><span class="pill pill-i">Automation</span></div></div>
       </div>
       <div>
-        <div class="feat-item"><div class="feat-ic v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="feat-body"><h3>Logic Cloning & Knowledge Equity</h3><p>Converts transient employee AI skills into permanent Workflow Equity. New hires reach proficiency in 14 days using founder-level logic packages.</p><span class="pill pill-v">Staff Retention</span></div></div>
+        <div class="feat-item"><div class="feat-ic v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><div class="feat-body"><h3>Logic Cloning & Workflow Equity</h3><p>Converts transient AI skills into permanent Workflow Equity. Any team member reaches expert proficiency in 14 days using founder-level logic packages.</p><span class="pill pill-v">Institutional Logic</span></div></div>
         <div class="feat-item"><div class="feat-ic c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><div class="feat-body"><h3>Community Logic Network (CLN)</h3><p>Federated learning sharing anonymized Workflow DNA across UK firms. Network intelligence improves for all without sharing private data.</p><span class="pill pill-c">Network Effect</span></div></div>
         <div class="feat-item"><div class="feat-ic g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="feat-body"><h3>UK Compliance & ICO Governance</h3><p>Audit-ready forensic reporting aligned to UK Principles-Based AI Framework and ICO/GDPR standards. Automated transparency reports for regulators.</p><span class="pill pill-g">UK Compliant</span></div></div>
         <div class="feat-item" style="border:none;padding-bottom:0"><div class="feat-ic i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="feat-body"><h3>Workflow Equity Analytics Dashboard</h3><p>Real-time performance scoring, failure forensics, and business impact attribution. AI quality linked directly to revenue and client satisfaction.</p><span class="pill pill-i">Analytics</span></div></div>
@@ -1563,8 +1691,8 @@ button,input,select,textarea{font-family:var(--fb)}
         <div class="pc-badge">MOST POPULAR</div>
         <div class="pc-tier">DNA Architect</div>
         <div class="pc-price">£380<span>/month</span></div>
-        <div class="pc-desc">High-volume Recruitment & Consulting firms. Full logic cloning and outcome memory.</div>
-        <ul class="pc-features"><li>Advanced DNA Fingerprinting & Logic Cloning</li><li>Outcome-Learning Memory (OLM)</li><li>HubSpot & Slack CRM sync</li><li>Hallucination reduction suite</li><li>Team knowledge retention</li><li>Priority support + onboarding session</li></ul>
+        <div class="pc-desc">High-volume Consulting & IT firms. Full logic cloning and outcome memory.</div>
+        <ul class="pc-features"><li>Advanced DNA Fingerprinting & Logic Cloning</li><li>Outcome-Learning Memory (OLM)</li><li>HubSpot & Slack CRM sync</li><li>Hallucination reduction suite</li><li>Institutional workflow preservation</li><li>Priority support + setup session</li></ul>
         <button class="pc-btn" onclick="nav('demo')">Get DNA Architect</button>
       </div>
       <div class="price-card animate-in">
@@ -1577,7 +1705,7 @@ button,input,select,textarea{font-family:var(--fb)}
     </div>
     <div style="margin-top:32px;background:linear-gradient(135deg,rgba(79,34,184,0.06),rgba(81,84,232,0.04));border:1px solid rgba(143,87,240,0.18);border-radius:var(--rxl);padding:26px 30px;display:grid;grid-template-columns:1fr 1fr;gap:24px">
       <div><div style="font-family:var(--fh);font-size:.92rem;font-weight:800;color:var(--v4);margin-bottom:16px;letter-spacing:-.02em">🔧 Implementation Services</div>
-        <div class="dna-row"><div class="dna-ic" style="background:rgba(109,53,217,0.1);border:1px solid rgba(109,53,217,0.2)">🚀</div><div style="flex:1"><div class="dna-nm">DNA Onboarding & API Sync</div><div class="dna-ds">Setup, API calibration, secure node config</div></div><div style="font-family:var(--fh);font-size:1rem;font-weight:900;color:var(--v4)">£500</div></div>
+        <div class="dna-row"><div class="dna-ic" style="background:rgba(109,53,217,0.1);border:1px solid rgba(109,53,217,0.2)">🚀</div><div style="flex:1"><div class="dna-nm">DNA Setup & API Sync</div><div class="dna-ds">Setup, API calibration, secure node config</div></div><div style="font-family:var(--fh);font-size:1rem;font-weight:900;color:var(--v4)">£500</div></div>
         <div class="dna-row" style="margin-top:8px"><div class="dna-ic" style="background:rgba(14,164,105,0.1);border:1px solid rgba(14,164,105,0.2)">🔬</div><div style="flex:1"><div class="dna-nm">Forensic Health Assessment</div><div class="dna-ds">Custom DNA audit + team PromptOps training</div></div><div style="font-family:var(--fh);font-size:1rem;font-weight:900;color:var(--v4)">£550</div></div>
       </div>
       <div><div style="font-family:var(--fh);font-size:.88rem;font-weight:800;color:var(--txd1);margin-bottom:14px;letter-spacing:-.02em">Why teams pay £250–£500/month:</div>
@@ -1638,7 +1766,7 @@ button,input,select,textarea{font-family:var(--fb)}
           <tr><td>Logic Core (SaaS)</td><td class="fin-pos">£13,400</td><td class="fin-pos">£51,600</td><td class="fin-pos">£105,600</td></tr>
           <tr><td>DNA Architect (SaaS)</td><td class="fin-pos">£50,920</td><td class="fin-pos">£196,080</td><td class="fin-pos">£401,280</td></tr>
           <tr><td>Logic Sovereign (SaaS)</td><td class="fin-pos">£16,750</td><td class="fin-pos">£64,500</td><td class="fin-pos">£132,000</td></tr>
-          <tr><td>DNA Onboarding & API Sync</td><td class="fin-pos">£16,750</td><td class="fin-pos">£98,250</td><td class="fin-pos">£194,500</td></tr>
+          <tr><td>DNA Setup & API Sync</td><td class="fin-pos">£16,750</td><td class="fin-pos">£98,250</td><td class="fin-pos">£194,500</td></tr>
           <tr><td>Forensic Health Assessment</td><td style="color:var(--txd3)"> </td><td class="fin-pos">£35,475</td><td class="fin-pos">£72,600</td></tr>
           <tr class="fin-row-highlight"><td>Total Revenue</td><td class="fin-pos">£97,820</td><td class="fin-pos">£445,905</td><td class="fin-pos">£905,980</td></tr>
           <tr><td>Gross Profit</td><td class="fin-pos">£39,247</td><td class="fin-pos">£209,978</td><td class="fin-pos">£430,738</td></tr>
@@ -1707,32 +1835,23 @@ button,input,select,textarea{font-family:var(--fb)}
         <div class="sec-hd"><div class="eyebrow">Growth Timeline</div><h2>5-Year Expansion Roadmap</h2></div>
         <div class="timeline">
           <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">Year 1 2026</div><div class="tl-title">London Soft Launch & Product Validation</div><div class="tl-desc">5–10 London IT & Consulting pilots. Build Fingerprinting engine. 75 client target. Founder reinvests all revenue into R&D. Break-even milestone.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">Year 2 2027</div><div class="tl-title">Full UK Launch Manchester, Birmingham, Bristol</div><div class="tl-desc">Scale to 50–100 agencies. Integrate Microsoft 365, HubSpot, Salesforce. Hire 4–6 employees. Revenue target £445,905. Consistent recurring SaaS.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">Year 3 2028</div><div class="tl-title">National UK + Early EU Pilots</div><div class="tl-desc">200+ UK firms. Enter Berlin, Paris, Stockholm. Scale CLN. API licensing to HR-tech & PM tools. 50–70% YoY revenue growth.</div></div>
-          <div class="tl-item" style="margin-bottom:0"><div class="tl-dot" style="background:var(--ind)"></div><div class="tl-yr">Years 4–5 2029–2030</div><div class="tl-title">International Scale & Global Platform</div><div class="tl-desc">500+ global agencies. North America entry. AI-driven onboarding. 20+ UK jobs. PromptOps AI becomes the global standard for professional AI governance.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">Year 2 2027</div><div class="tl-title">Full UK Launch Manchester, Birmingham, Bristol</div><div class="tl-desc">Scale to 50–100 agencies. Integrate Microsoft 365, HubSpot, Salesforce. Expand team to 4–6 members. Revenue target £445,905. Consistent recurring SaaS.</div></div>
+          <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">Year 3 2028</div><div class="tl-title">National UK + Early EU Pilots</div><div class="tl-desc">200+ UK firms. Enter Berlin, Paris, Stockholm. Scale CLN. API licensing to legal-tech, PM tools & digital agencies. 50–70% YoY revenue growth.</div></div>
+          <div class="tl-item" style="margin-bottom:0"><div class="tl-dot" style="background:var(--ind)"></div><div class="tl-yr">Years 4–5 2029–2030</div><div class="tl-title">International Scale & Global Platform</div><div class="tl-desc">500+ global agencies. North America entry. AI-driven workflow deployment. 20+ UK jobs. PromptOps AI becomes the global standard for professional AI governance.</div></div>
         </div>
       </div>
       <div>
         <div class="ch-panel" style="margin-bottom:18px"><div class="ch-title">Client Growth (Year 1 Trajectory)</div><div class="ch-sub">Active firms by month</div><div class="ch-canvas" style="height:190px"><canvas id="c-clients"></canvas></div></div>
-        <div class="sec-hd" style="margin-bottom:14px"><div class="eyebrow">Hiring Plan</div><h3>UK Job Creation</h3></div>
+        <div class="sec-hd" style="margin-bottom:14px"><div class="eyebrow">Team Growth</div><h3>UK Job Creation</h3></div>
         <div class="activity">
           <div class="act-item"><div class="act-dot v"></div><div><div class="act-msg">Year 1 Software Engineer (Full Stack)</div><div class="act-ts">Core platform · Infinity Prompt · API bridges</div></div></div>
-          <div class="act-item"><div class="act-dot g"></div><div><div class="act-msg">Year 2 Senior Data Scientist + Customer Success Lead</div><div class="act-ts">PFFE accuracy · Onboarding & DNA Audits</div></div></div>
+          <div class="act-item"><div class="act-dot g"></div><div><div class="act-msg">Year 2 Senior Data Scientist + Customer Success Lead</div><div class="act-ts">PFFE accuracy · Client DNA Audits</div></div></div>
           <div class="act-item"><div class="act-dot i"></div><div><div class="act-msg">Year 3 Platform Integration Engineer + Ops Manager</div><div class="act-ts">UK-wide connectivity · National deployment</div></div></div>
           <div class="act-item"><div class="act-dot w"></div><div><div class="act-msg">Years 4–5 Senior AI Lead + Global Commercial Team</div><div class="act-ts">LLMOps research · International expansion</div></div></div>
         </div>
       </div>
     </div>
   </div>
-  <div class="sec sec-muted">
-    <div class="sec-hd"><div class="eyebrow">Pilot Feedback</div><h2>What UK SMEs Said</h2></div>
-    <div class="grid-3">
-      <div class="testi-card animate-in"><div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div><div class="testi-quote">"A platform that provides real-time PromptOps governance and failure forensic alerts would be essential for our future scaling. The logic cloning alone reduced our onboarding time dramatically."</div><div class="testi-author"><div class="testi-av">RS</div><div><div class="testi-nm">Rachel S.</div><div class="testi-role">Operations Director · London IT Firm</div></div></div></div>
-      <div class="testi-card animate-in"><div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div><div class="testi-quote">"We were losing expert prompt logic every time a senior developer left. PromptOps AI captured that DNA and our new hires are at full proficiency within 2 weeks. Truly transformative."</div><div class="testi-author"><div class="testi-av">MK</div><div><div class="testi-nm">Marcus K.</div><div class="testi-role">Founder · Manchester Digital Agency</div></div></div></div>
-      <div class="testi-card animate-in"><div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div><div class="testi-quote">"The PFFE engine caught a hallucination in a legal brief before it reached the client. That single incident justified the entire subscription cost for the year. Remarkable accuracy."</div><div class="testi-author"><div class="testi-av">JP</div><div><div class="testi-nm">James P.</div><div class="testi-role">Partner · Birmingham Legal Support</div></div></div></div>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <div class="footer">
     <div class="footer-grid">
@@ -1917,7 +2036,7 @@ button,input,select,textarea{font-family:var(--fb)}
       </div>
       <div class="card animate-in" style="border-top:3px solid var(--ok)">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--ok),#34d399);display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-family:var(--fh)">03</div><h3 style="margin:0">Community Logic Network (CLN)</h3></div>
-        <p>Federated learning architecture allowing anonymized "Workflow DNA" from thousands of UK SMEs to continuously improve predictive models. Trends from high-conversion recruitment patterns in London optimize workflow strategies for consulting firms in Manchester a collective intelligence ecosystem new players must start from scratch to build.</p>
+        <p>Federated learning architecture allowing anonymized "Workflow DNA" from thousands of UK SMEs to continuously improve predictive models. Trends from high-conversion client delivery patterns in London optimize workflow strategies for consulting firms in Manchester  a collective intelligence ecosystem new players must start from scratch to build.</p>
         <div style="margin-top:12px;padding:10px 14px;background:rgba(14,164,105,0.06);border-radius:var(--r);border:1px solid rgba(14,164,105,0.15)"><span style="font-family:var(--fm);font-size:.65rem;color:var(--ok);font-weight:700">Defensibility Score: 88/100</span></div>
       </div>
       <div class="card animate-in" style="border-top:3px solid var(--warn)">
@@ -1934,7 +2053,7 @@ button,input,select,textarea{font-family:var(--fb)}
       <div class="card card-dark animate-in">
         <div class="c-num" style="background:rgba(109,53,217,0.2);color:var(--v1)">Phase 1 Year 1</div>
         <h3>UK Seed Data Moat</h3>
-        <p>UK-specific labeled datasets mapping "good" vs "bad" PromptOps AI chains. Early model performance benchmarks difficult to replicate without live UK pilots. Infinity Prompt core layer as rapid SME onboarding vector.</p>
+        <p>UK-specific labeled datasets mapping "good" vs "bad" PromptOps AI chains. Early model performance benchmarks difficult to replicate without live UK pilots. Infinity Prompt core layer as rapid SME deployment vector.</p>
         <div style="margin-top:10px"><div class="prog-item"><div class="prog-head"><span class="prog-lbl" style="color:var(--tx2);font-size:.7rem">Data Moat</span><span class="prog-pct" style="color:var(--v2)">60%</span></div><div class="prog-track" style="background:rgba(255,255,255,0.08)"><div class="prog-fill pf-violet" style="width:60%"></div></div></div></div>
       </div>
       <div class="card card-dark animate-in">
@@ -1957,7 +2076,7 @@ button,input,select,textarea{font-family:var(--fb)}
     <div class="grid-2">
       <div>
         <div style="display:flex;flex-direction:column;gap:12px">
-          <div class="card" style="border-left:3px solid var(--red)"><h3 style="color:var(--red);margin-bottom:6px">OpenAI / Claude Enterprise</h3><p>Raw intelligence without organizational memory. Requires significant "AI literacy" most UK SMEs lack. No logic retention when staff leave businesses don't "own" their prompt DNA.</p></div>
+          <div class="card" style="border-left:3px solid var(--red)"><h3 style="color:var(--red);margin-bottom:6px">OpenAI / Claude Enterprise</h3><p>Raw intelligence without organizational memory. Requires significant "AI literacy" most UK SMEs lack. No logic retention  businesses don't "own" their prompt DNA across team changes.</p></div>
           <div class="card" style="border-left:3px solid var(--warn)"><h3 style="color:var(--warn);margin-bottom:6px">PromptPerfect / AIPRM</h3><p>Better inputs, total outcome silo. No predictive operational modelling or failure forensics. Cannot verify if a prompt chain resulted in a successful commercial outcome.</p></div>
           <div class="card" style="border-left:3px solid var(--cyan)"><h3 style="color:var(--cyan);margin-bottom:6px">Zapier / Make.com</h3><p>Connects apps but has zero intelligence layer. Cannot identify logic friction or perform failure forensics on why an AI-driven task failed to meet business standards.</p></div>
         </div>
@@ -2039,7 +2158,7 @@ button,input,select,textarea{font-family:var(--fb)}
       <div>
         <div class="card" style="margin-bottom:16px;border-left:3px solid var(--v3)">
           <h3>Knowledge Equity for All</h3>
-          <p>By capturing expert workflows, PromptOps AI protects UK service businesses from the high cost of talent turnover. Junior staff achieve expert-level results in 14 days instead of 45 democratising access to institutional intelligence regardless of firm size or geography.</p>
+          <p>By capturing expert workflows, PromptOps AI protects UK service businesses from the high cost of AI logic fragmentation. Any team member achieves expert-level results in 14 days instead of 45  democratising access to institutional intelligence regardless of firm size or geography.</p>
         </div>
         <div class="card" style="border-left:3px solid var(--gold)">
           <h3>UK Job Creation</h3>
@@ -2145,7 +2264,7 @@ button,input,select,textarea{font-family:var(--fb)}
       <div class="card animate-in" style="border-left:4px solid var(--warn)">
         <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap">
           <div style="flex-shrink:0;width:120px"><div style="font-family:var(--fm);font-size:.58rem;color:var(--txd3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Category</div><div style="font-size:.76rem;font-weight:700;color:var(--txd1)">SME Adoption</div><div style="margin-top:6px;padding:3px 8px;background:rgba(232,146,10,0.1);border:1px solid rgba(232,146,10,0.25);border-radius:20px;font-family:var(--fm);font-size:.52rem;color:var(--warn);display:inline-block">MEDIUM</div></div>
-          <div style="flex:1;min-width:180px"><div style="font-size:.8rem;font-weight:700;color:var(--txd1);margin-bottom:4px">SMEs may resist adoption due to lack of technical skills</div><p style="margin:0">Low-friction browser extension interface. Messaging focused on "Logic Equity" and protecting institutional memory. Pre-configured workflow packs for Recruitment and Consulting sectors.</p></div>
+          <div style="flex:1;min-width:180px"><div style="font-size:.8rem;font-weight:700;color:var(--txd1);margin-bottom:4px">SMEs may resist adoption due to lack of technical skills</div><p style="margin:0">Low-friction browser extension interface. Messaging focused on "Logic Equity" and protecting institutional memory. Pre-configured workflow packs for Consulting and IT Services sectors.</p></div>
         </div>
       </div>
 
@@ -2187,7 +2306,7 @@ button,input,select,textarea{font-family:var(--fb)}
       <div class="card animate-in" style="border-left:4px solid var(--warn)">
         <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap">
           <div style="flex-shrink:0;width:120px"><div style="font-family:var(--fm);font-size:.58rem;color:var(--txd3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Category</div><div style="font-size:.76rem;font-weight:700;color:var(--txd1)">Fragmentation</div><div style="margin-top:6px;padding:3px 8px;background:rgba(232,146,10,0.1);border:1px solid rgba(232,146,10,0.25);border-radius:20px;font-family:var(--fm);font-size:.52rem;color:var(--warn);display:inline-block">MEDIUM</div></div>
-          <div style="flex:1;min-width:180px"><div style="font-size:.8rem;font-weight:700;color:var(--txd1);margin-bottom:4px">Highly fragmented UK market increases customer acquisition cost</div><p style="margin:0">Target regional professional clusters (London/Manchester tech hubs) and industry bodies (TechUK). Focus on repeatable, automated "DNA Audit" onboarding processes to reduce CAC.</p></div>
+          <div style="flex:1;min-width:180px"><div style="font-size:.8rem;font-weight:700;color:var(--txd1);margin-bottom:4px">Highly fragmented UK market increases customer acquisition cost</div><p style="margin:0">Target regional professional clusters (London/Manchester tech hubs) and industry bodies (TechUK). Focus on repeatable, automated "DNA Audit" deployment processes to reduce CAC.</p></div>
         </div>
       </div>
 
@@ -2279,11 +2398,11 @@ function runDemo(){
   out.style.display='block'; out.classList.add('show');
   out.innerHTML='<span style="color:var(--v3);font-family:var(--fm);font-size:.7rem">⚡ Processing intent...</span>';
   setStep(1);
-  setTimeout(()=>{setStep(2);out.innerHTML='<span style="color:var(--ind);font-family:var(--fm);font-size:.7rem">🔄 Multi-model execution (GPT-4 + Claude)...</span>';},800);
+  setTimeout(()=>{setStep(2);out.innerHTML='<span style="color:var(--ind);font-family:var(--fm);font-size:.7rem">🔄 Multi-model execution (GPT-4o + Claude Sonnet 4.6)...</span>';},800);
   setTimeout(()=>{setStep(3);out.innerHTML='<span style="color:var(--warn);font-family:var(--fm);font-size:.7rem">🔬 PFFE scanning for hallucinations...</span>';},1600);
   setTimeout(()=>{
     setStep(4);
-    out.innerHTML=`<div style="font-family:var(--fm);font-size:.62rem;color:var(--ok);margin-bottom:9px;font-weight:700">✓ FORENSICS PASS · 0 hallucinations · Brand compliant · GDPR OK</div><div style="font-size:.79rem;color:var(--txd2);line-height:1.74"><strong style="color:var(--txd1)">Generated Output:</strong><br/><br/>Subject: Partnership Opportunity Enterprise AI Workflow Intelligence<br/><br/>Dear [Director's Name],<br/><br/>I'm reaching out regarding a measurable operational challenge we've identified across leading London IT firms: the systematic loss of expert AI workflow logic during staff transitions.<br/><br/>PromptOps AI has developed a proprietary Logic Cloning system that captures, benchmarks, and transfers institutional knowledge reducing onboarding from 45 to 14 days while eliminating hallucinations in client deliverables.<br/><br/>Would you be available for a 20-minute demonstration?</div>`;
+    out.innerHTML=`<div style="font-family:var(--fm);font-size:.62rem;color:var(--ok);margin-bottom:9px;font-weight:700">✓ FORENSICS PASS · 0 hallucinations · Brand compliant · GDPR OK</div><div style="font-size:.79rem;color:var(--txd2);line-height:1.74"><strong style="color:var(--txd1)">Generated Output:</strong><br/><br/>Subject: Partnership Opportunity Enterprise AI Workflow Intelligence<br/><br/>Dear [Director's Name],<br/><br/>I'm reaching out regarding a measurable operational challenge we've identified across leading London IT firms: the systematic degradation of expert AI workflow logic without a governance layer.<br/><br/>PromptOps AI has developed a proprietary Logic Cloning system that captures, benchmarks, and preserves institutional knowledge  reducing time-to-proficiency from 45 to 14 days while eliminating hallucinations in client deliverables.<br/><br/>Would you be available for a 20-minute demonstration?</div>`;
     demoRunning=false;
   },2500);
 }
@@ -2300,8 +2419,8 @@ function cloneLogic(){
 function toggleChat(){ document.getElementById('ai-panel').classList.toggle('show'); }
 const KB={
   'what is':'PromptOps AI is an AI-powered, end-to-end workflow automation and logic capture platform for UK SMEs. It captures expert AI workflows as "Workflow DNA", eliminates hallucinations via forensic detection (PFFE), and transforms fragmented AI usage into measurable business assets. Founded by Bathula Sai Mutya Naveen.',
-  'pricing':'Three SaaS plans: **Logic Core** £100/mo (solo founders), **DNA Architect** £380/mo (consulting firms), **Logic Sovereign** £250/mo base (multi-site). Plus DNA Onboarding £500 (one-time) and Forensic Health Assessment £550.',
-  'logic cloning':'Logic Cloning captures expert prompt sequences as "Workflow DNA" and packages them for instant reuse. New hires execute at founder-level standard from day one reducing onboarding from 45 to 14 days, eliminating logic loss during staff turnover.',
+  'pricing':'Three SaaS plans: **Logic Core** £100/mo (solo founders), **DNA Architect** £380/mo (consulting firms), **Logic Sovereign** £250/mo base (multi-site). Plus DNA Setup £500 (one-time) and Forensic Health Assessment £550.',
+  'logic cloning':'Logic Cloning captures expert prompt sequences as "Workflow DNA" and packages them for instant reuse. Any team member executes at founder-level standard from day one  reducing time-to-proficiency from 45 to 14 days, eliminating logic fragmentation across the platform.',
   'pffe':'The Prompt Failure Forensics Engine (PFFE) auto-diagnoses AI quiet failures hallucinations, context drift, logic errors before outputs reach clients. Eliminates the 84% manual checking bottleneck with real-time forensic analysis.',
   'pilot':'8-week pilot across 5 UK firms showed: +28% task speed, -18% hallucinations, 14-day proficiency (vs 45-day avg), 4.3/5 Logic Equity score, 4.0/5 integration satisfaction. 81% of firms "highly impressed" by forensic insights.',
   'market':'182 UK respondents survey: 85.3% likely to adopt, 89.9% want auto-prompt improvement, 42.9% willing to pay £250–£500/month, 85.9% interested in beta program.',
@@ -2404,12 +2523,18 @@ function initCharts(pid){
     CI.freq=new Chart(document.getElementById('c-freq').getContext('2d'),{type:'pie',data:{labels:['Daily','Several/Week','Occasionally','Testing','Not Yet'],datasets:[{data:[48.6,27.7,16.9,4,2.8],backgroundColor:['rgba(79,34,184,0.9)','rgba(109,53,217,0.78)','rgba(6,182,212,0.7)','rgba(232,146,10,0.65)','rgba(224,59,59,0.55)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
     CI.time=mkBar('c-time',['<30min','30-60min','1-3 hrs','3-5 hrs','>5 hrs'],[8.5,16.9,53.7,16.9,4],['rgba(14,164,105,0.7)','rgba(81,84,232,0.72)','rgba(79,34,184,0.9)','rgba(232,146,10,0.72)','rgba(224,59,59,0.7)'],{scales:{y:{beginAtZero:true,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
     CI.feat=mkBar('c-feat',['Prompt Libs','Workflow Clone','Hallucin.','Knowledge','Analytics'],[25.3,19.8,18.1,17.5,13.6],['rgba(79,34,184,0.88)','rgba(81,84,232,0.78)','rgba(224,59,59,0.7)','rgba(14,164,105,0.75)','rgba(232,146,10,0.72)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:30,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+    CI.empSize=mkBar('c-emp-size',['1–5','6–20','21–50','51–200','200+'],[22.6,24.9,18.1,27.7,6.7],['rgba(6,182,212,0.65)','rgba(81,84,232,0.72)','rgba(79,34,184,0.85)','rgba(109,53,217,0.78)','rgba(232,146,10,0.68)'],{scales:{y:{beginAtZero:true,max:32,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+    CI.useCases=mkBar('c-use-cases',['Coding/Dev','Research','Workflow Auto','Reporting/Docs','Consulting','Client Comms'],[26,19.2,15.8,13,10.2,9.6],['rgba(79,34,184,0.9)','rgba(81,84,232,0.8)','rgba(109,53,217,0.75)','rgba(6,182,212,0.7)','rgba(232,146,10,0.68)','rgba(14,164,105,0.65)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:30,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
     CI.budget=mkBar('c-budget',['<£50','£50-£100','£100-£250','£250-£500','£500+'],
       [9.6,7.9,25.4,40.7,16.4],
       ['rgba(6,182,212,0.55)','rgba(81,84,232,0.65)','rgba(109,53,217,0.8)','rgba(79,34,184,0.92)','rgba(232,146,10,0.78)'],
       {scales:{y:{beginAtZero:true,max:46,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
     CI.adoptLikely=mkDoughnut('c-adopt-likely',['Very Likely','Likely','Maybe','Unlikely'],[36.7,48.6,11.3,3.4],['rgba(14,164,105,0.88)','rgba(79,34,184,0.82)','rgba(232,146,10,0.68)','rgba(224,59,59,0.55)']);
     CI.market=mkBar('c-market',['IT & Software','Advertising','Other Creative'],[62.4,24.3,59.1],['rgba(79,34,184,0.88)','rgba(81,84,232,0.75)','rgba(143,87,240,0.55)'],{scales:{y:{beginAtZero:true,grid:{color:CP.bg_grid},ticks:{callback:v=>'£'+v+'B',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+    CI.inconsistency=mkBar('c-inconsistency',['Very Often','Sometimes','Rarely','Never'],[57.6,19.2,18.6,4.6],['rgba(224,59,59,0.8)','rgba(232,146,10,0.75)','rgba(79,34,184,0.72)','rgba(14,164,105,0.68)'],{scales:{y:{beginAtZero:true,max:65,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+    CI.challenges=mkBar('c-challenges',['Inconsistent','No Workflows','Hallucinations','Scaling','Privacy'],[28.2,27.5,22.6,11.3,10.4],['rgba(224,59,59,0.78)','rgba(232,146,10,0.72)','rgba(79,34,184,0.85)','rgba(81,84,232,0.72)','rgba(6,182,212,0.65)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:32,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+    CI.cloneUtility=mkDoughnut('c-clone-utility',['Extremely Useful','Useful','Neutral','Not Useful'],[39.0,50.8,7.3,2.9],['rgba(14,164,105,0.9)','rgba(79,34,184,0.82)','rgba(232,146,10,0.65)','rgba(224,59,59,0.55)']);
+    CI.pricingPref=mkBar('c-pricing-pref',['Monthly Sub','Annual Sub','Pay per Use','Enterprise','One-time'],[50.3,18.1,18.1,7.9,5.6],['rgba(79,34,184,0.9)','rgba(81,84,232,0.78)','rgba(6,182,212,0.72)','rgba(232,146,10,0.68)','rgba(143,87,240,0.55)'],{scales:{y:{beginAtZero:true,max:55,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
   }
   if(pid==='financials'){
     CI.revstream=mkStackedBar('c-revstream',['Year 1','Year 2','Year 3'],[
