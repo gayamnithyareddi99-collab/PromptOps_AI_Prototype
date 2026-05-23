@@ -1196,14 +1196,32 @@ button,input,select,textarea{font-family:var(--fb)}
         </div>
       </div>
       <div>
-        <div class="sec-hd" style="margin-bottom:18px"><div class="eyebrow">Survey Intelligence</div><h2>Market Validation</h2></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Value Workflow Saving (Q10)</span><span class="prog-pct" style="color:var(--v3)">88.7%</span></div><div class="prog-track"><div class="prog-fill pf-violet" style="width:88.7%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Want Auto Prompt Improvement (Q15)</span><span class="prog-pct" style="color:var(--ok)">83.7%</span></div><div class="prog-track"><div class="prog-fill pf-green" style="width:83.7%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Likely / Very Likely to Adopt (Q18)</span><span class="prog-pct" style="color:var(--ind)">85.3%</span></div><div class="prog-track"><div class="prog-fill pf-indigo" style="width:85.3%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Interested in Beta Program (Q21)</span><span class="prog-pct" style="color:var(--ok)">85.9%</span></div><div class="prog-track"><div class="prog-fill pf-green" style="width:85.9%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">Pay £100–£500 Budget/Month (Q20)</span><span class="prog-pct" style="color:var(--warn)">66.1%</span></div><div class="prog-track"><div class="prog-fill pf-warm" style="width:66.1%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">AI Failure Analytics Valuable (Q16)</span><span class="prog-pct" style="color:var(--cyan)">81.3%</span></div><div class="prog-track"><div class="prog-fill pf-cyan" style="width:81.3%"></div></div></div>
-        <div class="prog-item"><div class="prog-head"><span class="prog-lbl">AI Output Inconsistency Problem (Q7)</span><span class="prog-pct" style="color:var(--red)">76.8%</span></div><div class="prog-track"><div class="prog-fill" style="width:76.8%;background:linear-gradient(90deg,var(--red),#f87171);border-radius:4px"></div></div></div>
+        <div class="sec-hd" style="margin-bottom:18px"><div class="eyebrow">Survey Intelligence · 207 Respondents</div><h2>Market Validation</h2></div>
+        <!-- 4 headline stat pills -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+          <div style="background:rgba(14,164,105,0.08);border:1px solid rgba(14,164,105,0.22);border-radius:12px;padding:12px;text-align:center">
+            <div style="font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--ok);letter-spacing:-.03em">85.5%</div>
+            <div style="font-size:.65rem;color:var(--txd2);margin-top:2px">Likely / Very Likely to Adopt <span style="color:var(--txd3)">(Q18)</span></div>
+          </div>
+          <div style="background:rgba(79,34,184,0.07);border:1px solid rgba(143,87,240,0.22);border-radius:12px;padding:12px;text-align:center">
+            <div style="font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--v3);letter-spacing:-.03em">87.4%</div>
+            <div style="font-size:.65rem;color:var(--txd2);margin-top:2px">Value Auto-Saving Workflows <span style="color:var(--txd3)">(Q10)</span></div>
+          </div>
+          <div style="background:rgba(81,84,232,0.07);border:1px solid rgba(81,84,232,0.22);border-radius:12px;padding:12px;text-align:center">
+            <div style="font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--ind);letter-spacing:-.03em">83.6%</div>
+            <div style="font-size:.65rem;color:var(--txd2);margin-top:2px">Want Auto Prompt Improvement <span style="color:var(--txd3)">(Q15)</span></div>
+          </div>
+          <div style="background:rgba(232,146,10,0.07);border:1px solid rgba(232,146,10,0.22);border-radius:12px;padding:12px;text-align:center">
+            <div style="font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--warn);letter-spacing:-.03em">86.4%</div>
+            <div style="font-size:.65rem;color:var(--txd2);margin-top:2px">Interested in Beta Pilot <span style="color:var(--txd3)">(Q21)</span></div>
+          </div>
+        </div>
+        <!-- Survey bar chart -->
+        <div class="ch-panel" style="padding:14px">
+          <div class="ch-title" style="margin-bottom:2px">Key Survey Results — All 21 Questions</div>
+          <div class="ch-sub" style="margin-bottom:10px">% positive / agreeing responses · 207 respondents</div>
+          <div style="height:260px"><canvas id="c-survey-overview"></canvas></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1402,94 +1420,203 @@ button,input,select,textarea{font-family:var(--fb)}
 
 <!-- ============================  PAGE: MARKET  ============================ -->
 <div class="page" id="p-market">
-  <div class="topbar"><div class="tb-left"><span class="tb-ttl">Market Research 177 Respondents, UK Professional Services</span></div><div class="tb-right"><span class="chip chip-ok">177 Responses</span><span class="chip chip-i">Validated</span></div></div>
+  <div class="topbar"><div class="tb-left"><span class="tb-ttl">Market Research · 207 Respondents · All 21 Survey Questions</span></div><div class="tb-right"><span class="chip chip-ok">207 Responses</span><span class="chip chip-i">Validated</span></div></div>
   <div class="hero">
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-grid">
       <div>
-        <div class="hero-tags"><span class="htag green">● Survey Complete</span><span class="htag">177 UK Respondents</span><span class="htag blue">Validated Data</span></div>
+        <div class="hero-tags"><span class="htag green">● Survey Complete</span><span class="htag">207 Respondents</span><span class="htag blue">All 21 Questions</span></div>
         <h1>Market Validation<br/><span class="hl">Survey Results</span></h1>
-        <p class="hero-sub">Comprehensive survey across UK IT, Consulting, and Professional Services confirming critical demand for PromptOps AI's governance platform.</p>
-        <div class="hero-metrics"><span>85.3% likely to adopt</span><span>85.9% beta interest</span><span>42.9% pay £250–500/mo</span></div>
+        <p class="hero-sub">Full breakdown of all 21 survey questions from the PromptOps AI Market Validation Survey — 207 responses across IT, Consulting, SaaS and R&amp;D sectors.</p>
+        <div class="hero-metrics"><span>85.5% likely to adopt</span><span>61.8% beta interest</span><span>41.5% pay £250–500/mo</span></div>
       </div>
       <div class="h-dashboard">
-        <div class="h-db-head"><span class="h-db-title">Key Headline Metrics</span><span class="h-db-live">● Validated</span></div>
+        <div class="h-db-head"><span class="h-db-title">Key Headline Metrics</span><span class="h-db-live">● 207 Validated</span></div>
         <div class="metrics-2x2">
-          <div class="m-cell"><div class="m-val g">85.9%</div><div class="m-lbl">Beta Interest</div></div>
-          <div class="m-cell"><div class="m-val v">85.3%</div><div class="m-lbl">Likely to Adopt</div></div>
-          <div class="m-cell"><div class="m-val w">89.9%</div><div class="m-lbl">Want Auto-Improve</div></div>
-          <div class="m-cell"><div class="m-val i">55.5%</div><div class="m-lbl">Inconsistent AI</div></div>
+          <div class="m-cell"><div class="m-val g">61.8%</div><div class="m-lbl">Beta Interest (Yes)</div></div>
+          <div class="m-cell"><div class="m-val v">85.5%</div><div class="m-lbl">Likely to Adopt</div></div>
+          <div class="m-cell"><div class="m-val w">57.5%</div><div class="m-lbl">Want Auto-Improve</div></div>
+          <div class="m-cell"><div class="m-val i">56.5%</div><div class="m-lbl">Inconsistent AI</div></div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- SECTION 1: BUSINESS PROFILE -->
   <div class="sec sec-light">
-    <div class="sec-hd"><div class="eyebrow">Survey Intelligence</div><h2>Industry Profile & AI Usage (177 Respondents)</h2></div>
-    <div class="grid-2" style="margin-bottom:24px">
-      <div class="ch-panel"><div class="ch-title">Industry Distribution</div><div class="ch-sub">Sector breakdown of survey respondents</div><div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-industry" style="max-height:200px"></canvas></div></div>
-      <div class="ch-panel"><div class="ch-title">AI Usage Frequency</div><div class="ch-sub">How often does your team use AI tools?</div><div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-freq" style="max-height:200px"></canvas></div></div>
-    </div>
-    <div class="grid-2" style="margin-bottom:24px">
-      <div class="ch-panel"><div class="ch-title">Company Size Distribution</div><div class="ch-sub">Number of employees across respondents</div><div class="ch-canvas" style="height:180px"><canvas id="c-emp-size"></canvas></div></div>
-      <div class="ch-panel"><div class="ch-title">Top AI Use Cases</div><div class="ch-sub">What are the main AI use cases in your business?</div><div class="ch-canvas" style="height:180px"><canvas id="c-use-cases"></canvas></div></div>
-    </div>
-    <div class="grid-2">
-      <div class="ch-panel"><div class="ch-title">Daily Time Correcting AI Errors</div><div class="ch-sub">49.5% spend 1–3 hours/day on manual corrections</div><div class="ch-canvas" style="height:180px"><canvas id="c-time"></canvas></div></div>
-      <div class="ch-panel"><div class="ch-title">Top Requested Platform Features</div><div class="ch-sub">What matters most to UK SMEs</div><div class="ch-canvas" style="height:180px"><canvas id="c-feat"></canvas></div></div>
+    <div class="sec-hd"><div class="eyebrow">Section 1 · Business Profile</div><h2>Q1–Q3: Who Responded?</h2></div>
+    <div class="grid-3" style="margin-bottom:24px">
+      <!-- Q1 Industry -->
+      <div class="ch-panel">
+        <div class="ch-title">Q1 · Industry</div>
+        <div class="ch-sub">Which industry best describes your business? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q1-industry" style="max-height:210px"></canvas></div>
+      </div>
+      <!-- Q2 Employees -->
+      <div class="ch-panel">
+        <div class="ch-title">Q2 · Company Size</div>
+        <div class="ch-sub">How many employees does your organisation have? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q2-size" style="max-height:210px"></canvas></div>
+      </div>
+      <!-- Q3 Role -->
+      <div class="ch-panel">
+        <div class="ch-title">Q3 · Role in Company</div>
+        <div class="ch-sub">What is your role? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q3-role" style="max-height:210px"></canvas></div>
+      </div>
     </div>
   </div>
+
+  <!-- SECTION 2: AI USAGE -->
   <div class="sec sec-muted">
-    <div class="sec-hd"><div class="eyebrow">Willingness to Pay</div><h2>Budget Signals & Adoption Intent</h2></div>
-    <div class="grid-2-3">
-      <div>
-        <div class="ch-panel" style="margin-bottom:16px"><div class="ch-title">Monthly Budget Willingness</div><div class="ch-sub">Realistic monthly allocation for AI workflow optimization</div><div class="ch-canvas" style="height:210px"><canvas id="c-budget"></canvas></div></div>
+    <div class="sec-hd"><div class="eyebrow">Section 2 · AI Usage &amp; Current Workflow</div><h2>Q4–Q8: How Teams Use AI Today</h2></div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <!-- Q4 Frequency -->
+      <div class="ch-panel">
+        <div class="ch-title">Q4 · AI Usage Frequency</div>
+        <div class="ch-sub">How frequently does your team use AI tools like ChatGPT, Claude, Gemini or Copilot? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q4-freq" style="max-height:210px"></canvas></div>
       </div>
-      <div>
-        <div class="ch-panel" style="margin-bottom:16px"><div class="ch-title">Adoption Likelihood</div><div class="ch-sub">How likely to adopt a workflow governance platform?</div><div class="ch-canvas" style="height:160px;display:flex;align-items:center;justify-content:center"><canvas id="c-adopt-likely" style="max-height:160px"></canvas></div></div>
-        <div style="background:rgba(14,164,105,0.08);border:1px solid rgba(14,164,105,0.22);border-radius:var(--rl);padding:16px;text-align:center">
-          <div style="font-family:var(--fh);font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--ok),#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.04em">85.3%</div>
-          <div style="font-size:.74rem;color:var(--txd2);margin-top:4px">Very Likely or Likely to Adopt</div>
-        </div>
+      <!-- Q5 Use Cases -->
+      <div class="ch-panel">
+        <div class="ch-title">Q5 · Main AI Use Cases</div>
+        <div class="ch-sub">What are the main use cases for AI in your business? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px"><canvas id="c-q5-usecases"></canvas></div>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-bottom:24px">
+      <!-- Q6 Time spent -->
+      <div class="ch-panel">
+        <div class="ch-title">Q6 · Daily Time Correcting AI</div>
+        <div class="ch-sub">How much time does your team spend manually correcting AI outputs daily? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px"><canvas id="c-q6-time"></canvas></div>
+      </div>
+      <!-- Q7 Inconsistency -->
+      <div class="ch-panel">
+        <div class="ch-title">Q7 · AI Output Inconsistency</div>
+        <div class="ch-sub">How often do you experience inconsistent or unreliable AI outputs? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px;display:flex;align-items:center;justify-content:center"><canvas id="c-q7-inconsist" style="max-height:190px"></canvas></div>
+      </div>
+      <!-- Q8 Challenges -->
+      <div class="ch-panel">
+        <div class="ch-title">Q8 · Biggest AI Challenges</div>
+        <div class="ch-sub">What are the biggest challenges your team faces with AI? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px"><canvas id="c-q8-challenges"></canvas></div>
       </div>
     </div>
   </div>
+
+  <!-- SECTION 3: WORKFLOW & KNOWLEDGE RETENTION -->
+  <div class="sec sec-light">
+    <div class="sec-hd"><div class="eyebrow">Section 3 · Workflow &amp; Knowledge Retention</div><h2>Q9–Q13: The Knowledge Gap Problem</h2></div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <!-- Q9 Standardised process -->
+      <div class="ch-panel">
+        <div class="ch-title">Q9 · Standardised AI Process</div>
+        <div class="ch-sub">Does your organisation currently have a standardised process for storing and reusing successful AI workflows/prompts? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q9-standard" style="max-height:210px"></canvas></div>
+      </div>
+      <!-- Q10 Workflow saving value -->
+      <div class="ch-panel">
+        <div class="ch-title">Q10 · Value of Auto-Saving Workflows</div>
+        <div class="ch-sub">How valuable would it be to automatically save and reuse successful AI workflows? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q10-value" style="max-height:210px"></canvas></div>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-bottom:24px">
+      <!-- Q11 Knowledge loss -->
+      <div class="ch-panel">
+        <div class="ch-title">Q11 · Knowledge Loss When Staff Leave</div>
+        <div class="ch-sub">Have you experienced "knowledge loss" when experienced employees leave? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px;display:flex;align-items:center;justify-content:center"><canvas id="c-q11-kloss" style="max-height:190px"></canvas></div>
+      </div>
+      <!-- Q12 Consistent AI quality -->
+      <div class="ch-panel">
+        <div class="ch-title">Q12 · Consistent AI Output Quality</div>
+        <div class="ch-sub">How important is it to maintain consistent AI output quality across all team members? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px;display:flex;align-items:center;justify-content:center"><canvas id="c-q12-quality" style="max-height:190px"></canvas></div>
+      </div>
+      <!-- Q13 Workflow cloning -->
+      <div class="ch-panel">
+        <div class="ch-title">Q13 · Cloning Senior Workflows</div>
+        <div class="ch-sub">If a platform could clone workflows from senior employees for new hires, how useful would that be? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px;display:flex;align-items:center;justify-content:center"><canvas id="c-q13-clone" style="max-height:190px"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: FEATURE INTEREST -->
   <div class="sec sec-dark">
-    <div class="sec-hd"><div class="eyebrow" style="color:var(--v1)">Full Survey Data · 177 Respondents</div><h2>Deep Validation: Workflow Pain, AI Inconsistency &amp; Pricing Signals</h2><p style="color:rgba(182,142,248,0.6)">Comprehensive breakdown from the PromptOps AI Market Validation Survey across all 21 questions.</p></div>
-    <div class="grid-3" style="margin-bottom:24px">
-      <div class="card card-dark animate-in"><div class="c-num" style="color:var(--warn)">57.6%</div><h3>No Standardised Process</h3><p>Over half of organisations have <strong>no standardised process</strong> for storing and reusing successful AI workflows or prompts.</p></div>
-      <div class="card card-dark animate-in"><div class="c-num" style="color:var(--ok)">88.7%</div><h3>Workflow Saving Valued</h3><p><strong>Extremely or Valuable</strong>: automatically saving and reusing successful AI workflows  a core PromptOps AI feature.</p></div>
-      <div class="card card-dark animate-in"><div class="c-num" style="color:var(--red)">57.6%</div><h3>Experience Inconsistent AI</h3><p><strong>Very Often</strong> experience inconsistent or unreliable AI outputs  the core problem PromptOps AI governance directly solves.</p></div>
+    <div class="sec-hd"><div class="eyebrow" style="color:var(--v1)">Section 4 · Interest in PromptOps AI Features</div><h2>Q14–Q17: Feature Demand Signals</h2></div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <!-- Q14 Features -->
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)">
+        <div class="ch-title" style="color:var(--tx1)">Q14 · Most Desired Platform Features</div>
+        <div class="ch-sub" style="color:var(--tx3)">Which features would interest you most in an AI workflow optimisation platform? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px"><canvas id="c-q14-features"></canvas></div>
+      </div>
+      <!-- Q15 Auto-improve -->
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)">
+        <div class="ch-title" style="color:var(--tx1)">Q15 · Auto-Improve Prompts Over Time</div>
+        <div class="ch-sub" style="color:var(--tx3)">Would you be interested in a platform that automatically improves weak prompts and workflows over time? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q15-autoimprove" style="max-height:210px"></canvas></div>
+      </div>
     </div>
     <div class="grid-2" style="margin-bottom:24px">
-      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">AI Inconsistency Frequency</div><div class="ch-sub" style="color:var(--tx3)">How often do you experience inconsistent AI outputs? (177 responses)</div><div class="ch-canvas" style="height:160px"><canvas id="c-inconsistency"></canvas></div></div>
-      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">Biggest AI Challenges</div><div class="ch-sub" style="color:var(--tx3)">Top pain points reported across 177 businesses</div><div class="ch-canvas" style="height:160px"><canvas id="c-challenges"></canvas></div></div>
-    </div>
-    <div class="grid-2" style="margin-bottom:24px">
-      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">Workflow Clone Utility Score</div><div class="ch-sub" style="color:var(--tx3)">If a platform cloned senior workflows for team members, how useful would that be?</div><div class="ch-canvas" style="height:160px"><canvas id="c-clone-utility"></canvas></div></div>
-      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)"><div class="ch-title" style="color:var(--tx1)">Preferred Pricing Model</div><div class="ch-sub" style="color:var(--tx3)">Which pricing model would you prefer? (177 responses)</div><div class="ch-canvas" style="height:160px"><canvas id="c-pricing-pref"></canvas></div></div>
-    </div>
-    <div class="grid-3" style="margin-bottom:24px">
-      <div class="card card-dark animate-in" style="border-left:3px solid var(--ok)">
-        <div style="font-family:var(--fm);font-size:.5rem;letter-spacing:.15em;color:var(--ok);margin-bottom:8px;text-transform:uppercase">Q15 · Auto-Improve Prompts</div>
-        <div style="font-size:1.6rem;font-weight:900;font-family:var(--fh);color:var(--ok);margin-bottom:4px">58.8%</div>
-        <p style="color:rgba(182,142,248,0.7);margin:0">said <strong style="color:var(--tx1)">"Yes definitely"</strong> to a platform that automatically improves weak prompts and workflows over time.</p>
+      <!-- Q16 Failure forensics -->
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)">
+        <div class="ch-title" style="color:var(--tx1)">Q16 · Value of AI Failure Forensics</div>
+        <div class="ch-sub" style="color:var(--tx3)">How valuable would AI workflow analytics and "failure forensics" be for your organisation? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px;display:flex;align-items:center;justify-content:center"><canvas id="c-q16-forensics" style="max-height:190px"></canvas></div>
       </div>
-      <div class="card card-dark animate-in" style="border-left:3px solid var(--v2)">
-        <div style="font-family:var(--fm);font-size:.5rem;letter-spacing:.15em;color:var(--v2);margin-bottom:8px;text-transform:uppercase">Q16 · Failure Analytics</div>
-        <div style="font-size:1.6rem;font-weight:900;font-family:var(--fh);color:var(--v2);margin-bottom:4px">81.3%</div>
-        <p style="color:rgba(182,142,248,0.7);margin:0"><strong style="color:var(--tx1)">Extremely or Valuable</strong>: AI workflow analytics and "failure forensics" for their organisation.</p>
+      <!-- Q17 Onboarding -->
+      <div class="ch-panel" style="background:rgba(255,255,255,0.04);border:1px solid rgba(143,87,240,0.18)">
+        <div class="ch-title" style="color:var(--tx1)">Q17 · Onboarding Speed via Reusable Workflows</div>
+        <div class="ch-sub" style="color:var(--tx3)">Would reducing onboarding time using reusable AI workflows benefit your business? (207 responses)</div>
+        <div class="ch-canvas" style="height:200px;display:flex;align-items:center;justify-content:center"><canvas id="c-q17-onboard" style="max-height:190px"></canvas></div>
       </div>
-      <div class="card card-dark animate-in" style="border-left:3px solid var(--ind)">
-        <div style="font-family:var(--fm);font-size:.5rem;letter-spacing:.15em;color:var(--ind);margin-bottom:8px;text-transform:uppercase">Q17 · Workflow Speed</div>
-        <div style="font-size:1.6rem;font-weight:900;font-family:var(--fh);color:var(--ind);margin-bottom:4px">85.9%</div>
-        <p style="color:rgba(182,142,248,0.7);margin:0"><strong style="color:var(--tx1)">Significantly or Moderately</strong>: reducing time-to-proficiency using reusable AI workflows would benefit their business.</p>
-      </div>
-    </div>
-    <div style="background:rgba(14,164,105,0.07);border:1px solid rgba(14,164,105,0.2);border-radius:var(--rl);padding:20px;text-align:center">
-      <div style="font-family:var(--fh);font-size:1.1rem;font-weight:900;color:var(--ok);margin-bottom:6px">86% Would Participate in Beta  Only 14.1% Said No</div>
-      <p style="font-size:.82rem;color:rgba(182,142,248,0.7);margin:0">60.5% said "Yes" + 25.4% said "Maybe" = <strong style="color:var(--tx1)">85.9% willing to pilot</strong> PromptOps AI. Strong demand signal from 177 validated UK professional service respondents.</p>
     </div>
   </div>
+
+  <!-- SECTION 5: ADOPTION & PRICING -->
+  <div class="sec sec-muted">
+    <div class="sec-hd"><div class="eyebrow">Section 5 · Adoption &amp; Pricing Validation</div><h2>Q18–Q21: Willingness to Pay &amp; Pilot</h2></div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <!-- Q18 Adoption likelihood -->
+      <div class="ch-panel">
+        <div class="ch-title">Q18 · Likelihood to Adopt</div>
+        <div class="ch-sub">How likely would your organisation be to adopt a platform that improves AI consistency, reduces hallucinations and standardises workflows? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q18-adopt" style="max-height:210px"></canvas></div>
+      </div>
+      <!-- Q19 Pricing model -->
+      <div class="ch-panel">
+        <div class="ch-title">Q19 · Preferred Pricing Model</div>
+        <div class="ch-sub">What pricing model would you prefer? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q19-pricing" style="max-height:210px"></canvas></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-bottom:24px">
+      <!-- Q20 Budget -->
+      <div class="ch-panel">
+        <div class="ch-title">Q20 · Monthly Budget Allocation</div>
+        <div class="ch-sub">What monthly budget would your organisation realistically allocate for an AI workflow optimisation platform? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px"><canvas id="c-q20-budget"></canvas></div>
+      </div>
+      <!-- Q21 Beta interest -->
+      <div class="ch-panel">
+        <div class="ch-title">Q21 · Early Pilot / Beta Interest</div>
+        <div class="ch-sub">Would you be interested in participating in an early pilot or beta testing program for PromptOps AI? (207 responses)</div>
+        <div class="ch-canvas" style="height:220px;display:flex;align-items:center;justify-content:center"><canvas id="c-q21-beta" style="max-height:210px"></canvas></div>
+      </div>
+    </div>
+    <!-- Summary callout -->
+    <div style="background:rgba(14,164,105,0.07);border:1px solid rgba(14,164,105,0.2);border-radius:var(--rl);padding:24px;text-align:center">
+      <div style="font-family:var(--fh);font-size:1.15rem;font-weight:900;color:var(--ok);margin-bottom:8px">86.4% Willing to Pilot — Only 13.5% Said No</div>
+      <p style="font-size:.84rem;color:var(--txd2);margin:0">61.8% said <strong>"Yes"</strong> + 24.6% said <strong>"Maybe"</strong> = <strong>86.4% willing to pilot</strong> PromptOps AI. Strong validated demand from 207 professional service respondents across IT Services, Consulting, SaaS and R&amp;D.</p>
+    </div>
+  </div>
+
+  <!-- UK GEOGRAPHY (kept) -->
   <div class="sec sec-light">
     <div class="sec-hd"><div class="eyebrow">UK Geography</div><h2>Regional Knowledge Equity Distribution</h2></div>
     <div class="grid-2">
@@ -1498,8 +1625,8 @@ button,input,select,textarea{font-family:var(--fb)}
         <div class="region-grid">
           <div class="region-card"><h4><span class="region-icon">🏙</span>London (Epicenter)</h4><ul><li>51.7% of Creative GVA</li><li>Premium rates demand zero-hallucination</li><li>78% of AI CreaTech businesses</li></ul></div>
           <div class="region-card"><h4><span class="region-icon">🌐</span>South East (Commuter Belt)</h4><ul><li>16.1% of GVA</li><li>Distributed teams need central governance</li><li>Unified remote brand voices</li></ul></div>
-          <div class="region-card"><h4><span class="region-icon">⚡</span>North West & Midlands</h4><ul><li>High-growth +300% scale-ups</li><li>Silicon Canal (Manchester)</li><li>Workflow automation priority</li></ul></div>
-          <div class="region-card"><h4><span class="region-icon">🔗</span>Scotland & Wales</h4><ul><li>Federated learning candidates</li><li>Bridge geographic digital divide</li><li>CLN benchmark access</li></ul></div>
+          <div class="region-card"><h4><span class="region-icon">⚡</span>North West &amp; Midlands</h4><ul><li>High-growth +300% scale-ups</li><li>Silicon Canal (Manchester)</li><li>Workflow automation priority</li></ul></div>
+          <div class="region-card"><h4><span class="region-icon">🔗</span>Scotland &amp; Wales</h4><ul><li>Federated learning candidates</li><li>Bridge geographic digital divide</li><li>CLN benchmark access</li></ul></div>
         </div>
       </div>
       <div>
@@ -1519,7 +1646,6 @@ button,input,select,textarea{font-family:var(--fb)}
       <div class="footer-brand">
         <h3>Prompt<em>Ops</em> AI</h3>
         <p>Engineering the DNA of Intelligent Workflows. Transforming fragmented AI interactions into permanent, measurable organizational assets for UK professional service SMEs.</p>
-        
       </div>
       <div class="footer-col"><h4>Platform</h4><a onclick="nav('overview')">Overview</a><a onclick="nav('solution')">Solution</a><a onclick="nav('features')">Features</a><a onclick="nav('demo')">Live Demo</a><a onclick="nav('pricing')">Pricing</a></div>
       <div class="footer-col"><h4>Research</h4><a onclick="nav('market')">Market Research</a><a onclick="nav('problem')">Problem Statement</a><a onclick="nav('financials')">Financials</a><a onclick="nav('growth')">Growth Plan</a></div>
@@ -2465,8 +2591,18 @@ const CP={v4:'#4f22b8',v3:'#6d35d9',v2:'#8f57f0',v1:'rgba(143,87,240,0.7)',
 Chart.defaults.font.family='"Plus Jakarta Sans",sans-serif';
 Chart.defaults.color='#7060a8';
 
+function getEl(id){return document.getElementById(id);}
+function safeChart(id,config){
+  const el=getEl(id);
+  if(!el) return null;
+  // Destroy any existing Chart.js instance on this canvas
+  const existing=Chart.getChart(el);
+  if(existing) existing.destroy();
+  try{ return new Chart(el, config); }catch(e){ console.warn('Chart skipped:',id,e.message); return null; }
+}
+function mkChart(id,config){return safeChart(id,config);}
 function mkBar(id,labels,data,colors,opts={}){
-  return new Chart(document.getElementById(id).getContext('2d'),{
+  return safeChart(id,{
     type:'bar',
     data:{labels,datasets:[{data,backgroundColor:colors,borderRadius:8,borderSkipped:false}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
@@ -2476,7 +2612,7 @@ function mkBar(id,labels,data,colors,opts={}){
   });
 }
 function mkLine(id,labels,data,color,fillColor){
-  return new Chart(document.getElementById(id).getContext('2d'),{
+  return safeChart(id,{
     type:'line',
     data:{labels,datasets:[{data,borderColor:color,backgroundColor:fillColor,fill:true,tension:0.4,pointBackgroundColor:color,pointRadius:5,borderWidth:2.5}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
@@ -2485,14 +2621,14 @@ function mkLine(id,labels,data,color,fillColor){
   });
 }
 function mkDoughnut(id,labels,data,colors){
-  return new Chart(document.getElementById(id).getContext('2d'),{
+  return safeChart(id,{
     type:'doughnut',
     data:{labels,datasets:[{data,backgroundColor:colors,borderWidth:0,hoverOffset:10}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:10},boxWidth:10,padding:8}}}}
   });
 }
 function mkStackedBar(id,labels,datasets){
-  return new Chart(document.getElementById(id).getContext('2d'),{
+  return safeChart(id,{
     type:'bar',
     data:{labels,datasets},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},
@@ -2502,10 +2638,15 @@ function mkStackedBar(id,labels,datasets){
 }
 
 function initCharts(pid){
-  if(inited.has(pid)) return;
-  inited.add(pid);
 
   if(pid==='overview'){
+    // Survey Intelligence overview chart — exact PDF data (207 respondents)
+    CI.surveyOv=mkBar('c-survey-overview',
+      ['Q10 Workflow Saving Valued','Q12 Consistent Quality Important','Q13 Cloning Useful','Q18 Likely to Adopt','Q15 Auto-Improve Interest','Q17 Onboarding Benefit','Q16 Failure Forensics Valuable','Q21 Beta Interest (Yes+Maybe)','Q7 AI Inconsistency (Sometimes+)','Q9 No Std Process','Q11 Knowledge Loss (Freq+Occ)'],
+      [87.4, 87.4, 88.9, 85.5, 83.6, 87.4, 80.7, 86.4, 75.8, 56.5, 68.1],
+      ['rgba(79,34,184,0.85)','rgba(81,84,232,0.78)','rgba(14,164,105,0.82)','rgba(14,164,105,0.9)','rgba(109,53,217,0.78)','rgba(6,182,212,0.72)','rgba(81,84,232,0.72)','rgba(232,146,10,0.78)','rgba(224,59,59,0.7)','rgba(224,59,59,0.65)','rgba(232,146,10,0.65)'],
+      {indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+ctx.parsed.x+'%'}}},scales:{x:{beginAtZero:true,max:100,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:8}}}}}
+    );
     CI.rev=mkBar('c-rev',['Year 1','Year 2','Year 3'],[97820,445905,905980],['rgba(143,87,240,0.55)','rgba(109,53,217,0.75)','rgba(79,34,184,0.9)'],{scales:{y:{beginAtZero:true,grid:{color:CP.bg_grid},ticks:{callback:v=>'£'+(v/1000).toFixed(0)+'K',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:11}}}}});
     CI.adopt=mkDoughnut('c-adopt',['Superficial','Structurally Embedded'],[54,16],['rgba(232,146,10,0.72)','rgba(79,34,184,0.88)']);
     CI.pain=mkBar('c-pain',['Inconsistent','No Workflows','Hallucinations','Privacy','Training'],[28.2,27.5,22.6,17.6,11.3],['rgba(79,34,184,0.82)','rgba(81,84,232,0.72)','rgba(224,59,59,0.65)','rgba(232,146,10,0.65)','rgba(6,182,212,0.65)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:35,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
@@ -2515,26 +2656,75 @@ function initCharts(pid){
     CI.paradox=mkBar('c-paradox',['Expected Gain','Actual Result (RCT 2025)'],[24,-19],['rgba(81,84,232,0.75)','rgba(224,59,59,0.72)'],{scales:{y:{grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:10}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:10}}}}});
   }
   if(pid==='solution'){
-    CI.radar=new Chart(document.getElementById('c-radar').getContext('2d'),{type:'radar',data:{labels:['Intent Capture','Workflow Synthesis','Multi-model Exec','PFFE Forensics','Logic Cloning','OLM Memory'],datasets:[{label:'PromptOps AI',data:[95,88,90,92,87,85],borderColor:CP.v3,backgroundColor:'rgba(109,53,217,0.1)',pointBackgroundColor:CP.v3,borderWidth:2.5},{label:'Generic Tools',data:[50,20,60,5,10,5],borderColor:'rgba(232,146,10,0.6)',backgroundColor:'rgba(232,146,10,0.05)',pointBackgroundColor:CP.warn,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},scales:{r:{grid:{color:'rgba(143,87,240,0.1)'},ticks:{backdropColor:'transparent',color:'#7060a8',font:{size:8}},pointLabels:{color:'#7060a8',font:{size:9}}}}}});
+    CI.radar=mkChart('c-radar',{type:'radar',data:{labels:['Intent Capture','Workflow Synthesis','Multi-model Exec','PFFE Forensics','Logic Cloning','OLM Memory'],datasets:[{label:'PromptOps AI',data:[95,88,90,92,87,85],borderColor:CP.v3,backgroundColor:'rgba(109,53,217,0.1)',pointBackgroundColor:CP.v3,borderWidth:2.5},{label:'Generic Tools',data:[50,20,60,5,10,5],borderColor:'rgba(232,146,10,0.6)',backgroundColor:'rgba(232,146,10,0.05)',pointBackgroundColor:CP.warn,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},scales:{r:{grid:{color:'rgba(143,87,240,0.1)'},ticks:{backdropColor:'transparent',color:'#7060a8',font:{size:8}},pointLabels:{color:'#7060a8',font:{size:9}}}}}});
     CI.onboard=mkBar('c-onboard',['Historical Avg','PromptOps AI'],[45,14],['rgba(224,59,59,0.7)','rgba(14,164,105,0.85)'],{scales:{y:{beginAtZero:true,max:55,grid:{color:CP.bg_grid},ticks:{callback:v=>v+' days',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:10}}}}});
   }
   if(pid==='market'){
-    CI.industry=mkDoughnut('c-industry',['IT & Software','Marketing/Creative','Consulting','Legal/Compliance'],[42.4,31.6,18.6,7.4],['rgba(79,34,184,0.88)','rgba(81,84,232,0.75)','rgba(6,182,212,0.7)','rgba(232,146,10,0.65)']);
-    CI.freq=new Chart(document.getElementById('c-freq').getContext('2d'),{type:'pie',data:{labels:['Daily','Several/Week','Occasionally','Testing','Not Yet'],datasets:[{data:[48.6,27.7,16.9,4,2.8],backgroundColor:['rgba(79,34,184,0.9)','rgba(109,53,217,0.78)','rgba(6,182,212,0.7)','rgba(232,146,10,0.65)','rgba(224,59,59,0.55)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
-    CI.time=mkBar('c-time',['<30min','30-60min','1-3 hrs','3-5 hrs','>5 hrs'],[8.5,16.9,53.7,16.9,4],['rgba(14,164,105,0.7)','rgba(81,84,232,0.72)','rgba(79,34,184,0.9)','rgba(232,146,10,0.72)','rgba(224,59,59,0.7)'],{scales:{y:{beginAtZero:true,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.feat=mkBar('c-feat',['Prompt Libs','Workflow Clone','Hallucin.','Knowledge','Analytics'],[25.3,19.8,18.1,17.5,13.6],['rgba(79,34,184,0.88)','rgba(81,84,232,0.78)','rgba(224,59,59,0.7)','rgba(14,164,105,0.75)','rgba(232,146,10,0.72)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:30,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.empSize=mkBar('c-emp-size',['1–5','6–20','21–50','51–200','200+'],[22.6,24.9,18.1,27.7,6.7],['rgba(6,182,212,0.65)','rgba(81,84,232,0.72)','rgba(79,34,184,0.85)','rgba(109,53,217,0.78)','rgba(232,146,10,0.68)'],{scales:{y:{beginAtZero:true,max:32,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.useCases=mkBar('c-use-cases',['Coding/Dev','Research','Workflow Auto','Reporting/Docs','Consulting','Client Comms'],[26,19.2,15.8,13,10.2,9.6],['rgba(79,34,184,0.9)','rgba(81,84,232,0.8)','rgba(109,53,217,0.75)','rgba(6,182,212,0.7)','rgba(232,146,10,0.68)','rgba(14,164,105,0.65)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:30,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.budget=mkBar('c-budget',['<£50','£50-£100','£100-£250','£250-£500','£500+'],
-      [9.6,7.9,25.4,40.7,16.4],
-      ['rgba(6,182,212,0.55)','rgba(81,84,232,0.65)','rgba(109,53,217,0.8)','rgba(79,34,184,0.92)','rgba(232,146,10,0.78)'],
-      {scales:{y:{beginAtZero:true,max:46,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.adoptLikely=mkDoughnut('c-adopt-likely',['Very Likely','Likely','Maybe','Unlikely'],[36.7,48.6,11.3,3.4],['rgba(14,164,105,0.88)','rgba(79,34,184,0.82)','rgba(232,146,10,0.68)','rgba(224,59,59,0.55)']);
+    // Keep originals that other pages may reference
     CI.market=mkBar('c-market',['IT & Software','Advertising','Other Creative'],[62.4,24.3,59.1],['rgba(79,34,184,0.88)','rgba(81,84,232,0.75)','rgba(143,87,240,0.55)'],{scales:{y:{beginAtZero:true,grid:{color:CP.bg_grid},ticks:{callback:v=>'£'+v+'B',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.inconsistency=mkBar('c-inconsistency',['Very Often','Sometimes','Rarely','Never'],[57.6,19.2,18.6,4.6],['rgba(224,59,59,0.8)','rgba(232,146,10,0.75)','rgba(79,34,184,0.72)','rgba(14,164,105,0.68)'],{scales:{y:{beginAtZero:true,max:65,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.challenges=mkBar('c-challenges',['Inconsistent','No Workflows','Hallucinations','Scaling','Privacy'],[28.2,27.5,22.6,11.3,10.4],['rgba(224,59,59,0.78)','rgba(232,146,10,0.72)','rgba(79,34,184,0.85)','rgba(81,84,232,0.72)','rgba(6,182,212,0.65)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:32,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
-    CI.cloneUtility=mkDoughnut('c-clone-utility',['Extremely Useful','Useful','Neutral','Not Useful'],[39.0,50.8,7.3,2.9],['rgba(14,164,105,0.9)','rgba(79,34,184,0.82)','rgba(232,146,10,0.65)','rgba(224,59,59,0.55)']);
-    CI.pricingPref=mkBar('c-pricing-pref',['Monthly Sub','Annual Sub','Pay per Use','Enterprise','One-time'],[50.3,18.1,18.1,7.9,5.6],['rgba(79,34,184,0.9)','rgba(81,84,232,0.78)','rgba(6,182,212,0.72)','rgba(232,146,10,0.68)','rgba(143,87,240,0.55)'],{scales:{y:{beginAtZero:true,max:55,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+
+    // ── Q1: Industry (PDF data: SaaS 44.9%, Consulting 31.4%, IT Services 16.9%, R&D 6.8%)
+    CI.q1=mkChart('c-q1-industry',{type:'doughnut',data:{labels:['SaaS / Product Co.','Consulting','IT Services','R&D'],datasets:[{data:[44.9,31.4,16.9,6.8],backgroundColor:['rgba(79,34,184,0.88)','rgba(81,84,232,0.75)','rgba(6,182,212,0.72)','rgba(232,146,10,0.68)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q2: Employee size (PDF: 1-5=29%, 6-20=23.2%, 21-50=17.9%, 51-200=22.7%, 200+=7.2%)
+    CI.q2=mkChart('c-q2-size',{type:'pie',data:{labels:['1–5','6–20','21–50','51–200','200+'],datasets:[{data:[29,23.2,17.9,22.7,7.2],backgroundColor:['rgba(6,182,212,0.65)','rgba(81,84,232,0.72)','rgba(79,34,184,0.85)','rgba(109,53,217,0.78)','rgba(232,146,10,0.7)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q3: Role (PDF: Team lead 27.5%, Technical/Eng 25.1%, Founder/CEO 15.9%, Ops Mgr 16.9%, Developer 14.5%)
+    CI.q3=mkChart('c-q3-role',{type:'doughnut',data:{labels:['Team Lead','Technical / Eng','Ops Manager','Founder / CEO','Developer'],datasets:[{data:[27.5,25.1,16.9,15.9,14.5],backgroundColor:['rgba(79,34,184,0.9)','rgba(81,84,232,0.78)','rgba(6,182,212,0.72)','rgba(109,53,217,0.65)','rgba(232,146,10,0.68)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q4: AI Frequency (PDF: Daily 51.2%, Several/week 25.6%, Occasionally 16.9%, Testing 0%, Not yet 6.3%)
+    CI.q4=mkChart('c-q4-freq',{type:'pie',data:{labels:['Daily','Several/Week','Occasionally','Testing Phase','Not Yet'],datasets:[{data:[51.2,25.6,16.9,3.4,2.9],backgroundColor:['rgba(79,34,184,0.9)','rgba(109,53,217,0.78)','rgba(6,182,212,0.7)','rgba(232,146,10,0.65)','rgba(224,59,59,0.55)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q5: Use Cases (PDF: Coding/Dev 24.6%, Research/Analysis 19.3%, Workflow Auto 15%, Reporting/Docs 15%, Consulting 10.1%, Client Comms 8.7%, Strategic 7.3%)
+    CI.q5=mkBar('c-q5-usecases',['Coding / Dev','Research','Workflow Auto','Reporting / Docs','Consulting','Client Comms','Strategic'],[24.6,19.3,15,15,10.1,8.7,7.3],['rgba(79,34,184,0.9)','rgba(81,84,232,0.8)','rgba(109,53,217,0.75)','rgba(6,182,212,0.72)','rgba(232,146,10,0.7)','rgba(14,164,105,0.68)','rgba(224,59,59,0.6)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:28,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+
+    // ── Q6: Time correcting AI (PDF: <30min 7.7%, 30-60min 16.4%, 1-3hrs 53.1%, 3-5hrs 17.9%, >5hrs 4.9%)
+    CI.q6=mkBar('c-q6-time',['< 30 min','30–60 min','1–3 hours','3–5 hours','> 5 hours'],[7.7,16.4,53.1,17.9,4.9],['rgba(14,164,105,0.7)','rgba(81,84,232,0.72)','rgba(79,34,184,0.9)','rgba(232,146,10,0.72)','rgba(224,59,59,0.7)'],{scales:{y:{beginAtZero:true,max:60,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+
+    // ── Q7: Inconsistency (PDF: Very Often 19.3%, Sometimes 56.5%, Rarely 19.8%, Never ~4.4%)
+    CI.q7=mkChart('c-q7-inconsist',{type:'doughnut',data:{labels:['Sometimes','Rarely','Very Often','Never'],datasets:[{data:[56.5,19.8,19.3,4.4],backgroundColor:['rgba(232,146,10,0.78)','rgba(79,34,184,0.72)','rgba(224,59,59,0.82)','rgba(14,164,105,0.68)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q8: Biggest Challenges (PDF: Inconsistent 26.1%, No std workflows 22.7%, Hallucinations ~19.8%, Training ~11.6%)
+    CI.q8=mkBar('c-q8-challenges',['Inconsistent Outputs','No Standardisation','Hallucinations','Prompt Difficulty','Team Training','Data Privacy','Scaling AI'],[26.1,22.7,19.8,11.6,9.7,6.3,3.8],['rgba(224,59,59,0.78)','rgba(232,146,10,0.74)','rgba(79,34,184,0.85)','rgba(81,84,232,0.72)','rgba(6,182,212,0.68)','rgba(109,53,217,0.6)','rgba(14,164,105,0.55)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:30,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:8}}}}});
+
+    // ── Q9: Standardised process (PDF: No 56.5%, Yes 25.6%, Partially 17.9%)
+    CI.q9=mkChart('c-q9-standard',{type:'pie',data:{labels:['No','Yes','Partially'],datasets:[{data:[56.5,25.6,17.9],backgroundColor:['rgba(224,59,59,0.78)','rgba(14,164,105,0.82)','rgba(232,146,10,0.72)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q10: Workflow saving value (PDF: Extremely valuable 53.1%, Valuable 34.3%, Neutral 9.7%, Slightly 2.9%)
+    CI.q10=mkChart('c-q10-value',{type:'doughnut',data:{labels:['Extremely Valuable','Valuable','Neutral','Slightly'],datasets:[{data:[53.1,34.3,9.7,2.9],backgroundColor:['rgba(14,164,105,0.9)','rgba(79,34,184,0.82)','rgba(232,146,10,0.65)','rgba(224,59,59,0.5)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q11: Knowledge loss (PDF: Frequently 28%, Occasionally 40.1%, Rarely 23.2%, Never 8.7%)
+    CI.q11=mkChart('c-q11-kloss',{type:'pie',data:{labels:['Occasionally','Frequently','Rarely','Never'],datasets:[{data:[40.1,28,23.2,8.7],backgroundColor:['rgba(232,146,10,0.78)','rgba(224,59,59,0.75)','rgba(81,84,232,0.7)','rgba(14,164,105,0.65)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q12: Consistent quality (PDF: Extremely important 58.9%, Important 28.5%, Neutral 8.7%, Not important ~3.9%)
+    CI.q12=mkChart('c-q12-quality',{type:'doughnut',data:{labels:['Extremely Important','Important','Neutral','Not Important'],datasets:[{data:[58.9,28.5,8.7,3.9],backgroundColor:['rgba(79,34,184,0.9)','rgba(81,84,232,0.78)','rgba(232,146,10,0.65)','rgba(224,59,59,0.5)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q13: Workflow cloning utility (PDF: Extremely useful 48.8%, Useful 40.1%, Neutral 8.7%, Not useful 2.4%)
+    CI.q13=mkChart('c-q13-clone',{type:'pie',data:{labels:['Extremely Useful','Useful','Neutral','Not Useful'],datasets:[{data:[48.8,40.1,8.7,2.4],backgroundColor:['rgba(14,164,105,0.9)','rgba(79,34,184,0.82)','rgba(232,146,10,0.65)','rgba(224,59,59,0.5)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q14: Features (PDF: Prompt libs ~19.3%, Workflow cloning ~18.4%, AI analytics 16.4%, Hallucin reduction 13%, Knowledge retention 12.1%, Auto workflow 10%, AI scoring 6%, Compliance 4.8%)
+    CI.q14=mkBar('c-q14-features',['Prompt Libraries','Workflow Cloning','AI Analytics','Hallucin. Reduction','Knowledge Retention','Auto Workflow Gen','AI Perf Scoring','Compliance Monitor'],[19.3,18.4,16.4,13,12.1,10,6,4.8],['rgba(79,34,184,0.9)','rgba(81,84,232,0.82)','rgba(6,182,212,0.78)','rgba(224,59,59,0.72)','rgba(14,164,105,0.75)','rgba(232,146,10,0.7)','rgba(109,53,217,0.65)','rgba(143,87,240,0.55)'],{indexAxis:'y',scales:{x:{beginAtZero:true,max:22,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},y:{grid:{display:false},ticks:{color:'#7060a8',font:{size:8}}}}});
+
+    // ── Q15: Auto-improve (PDF: Yes definitely 57.5%, Maybe 26.1%, Not sure 11.1%, No ~5.3%)
+    CI.q15=mkChart('c-q15-autoimprove',{type:'doughnut',data:{labels:['Yes, Definitely','Maybe','Not Sure','No'],datasets:[{data:[57.5,26.1,11.1,5.3],backgroundColor:['rgba(14,164,105,0.9)','rgba(79,34,184,0.78)','rgba(232,146,10,0.68)','rgba(224,59,59,0.55)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q16: Failure forensics value (PDF: Extremely valuable 43.5%, Valuable 37.2%, Neutral 15.5%, Not valuable ~3.8%)
+    CI.q16=mkChart('c-q16-forensics',{type:'pie',data:{labels:['Extremely Valuable','Valuable','Neutral','Not Valuable'],datasets:[{data:[43.5,37.2,15.5,3.8],backgroundColor:['rgba(14,164,105,0.9)','rgba(79,34,184,0.82)','rgba(232,146,10,0.65)','rgba(224,59,59,0.5)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q17: Onboarding benefit (PDF: Significantly 51.2%, Moderately 36.2%, Slightly ~9.7%, Not at all ~2.9%)
+    CI.q17=mkChart('c-q17-onboard',{type:'doughnut',data:{labels:['Significantly','Moderately','Slightly','Not at All'],datasets:[{data:[51.2,36.2,9.7,2.9],backgroundColor:['rgba(14,164,105,0.9)','rgba(79,34,184,0.82)','rgba(232,146,10,0.65)','rgba(224,59,59,0.5)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q18: Adoption likelihood (PDF: Likely 49.3%, Very Likely 36.2%, Maybe ~11.1%, Unlikely ~2.9%, Very unlikely ~0.5%)
+    CI.q18=mkChart('c-q18-adopt',{type:'pie',data:{labels:['Likely','Very Likely','Maybe','Unlikely','Very Unlikely'],datasets:[{data:[49.3,36.2,11.1,2.9,0.5],backgroundColor:['rgba(79,34,184,0.88)','rgba(14,164,105,0.85)','rgba(232,146,10,0.7)','rgba(224,59,59,0.6)','rgba(143,87,240,0.45)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q19: Pricing model (PDF: Monthly sub 52.7%, Annual sub 16.4%, Pay per use 17.9%, Enterprise 9.7%, One-time ~3.3%)
+    CI.q19=mkChart('c-q19-pricing',{type:'doughnut',data:{labels:['Monthly Sub','Annual Sub','Pay per Use','Enterprise','One-time'],datasets:[{data:[52.7,17.9,16.4,9.7,3.3],backgroundColor:['rgba(79,34,184,0.9)','rgba(81,84,232,0.78)','rgba(6,182,212,0.72)','rgba(232,146,10,0.68)','rgba(143,87,240,0.55)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}}}});
+
+    // ── Q20: Budget (PDF: <£50 9.7%, £50-100 7.7%, £100-250 24.6%, £250-500 41.5%, £500+ 16.4%)
+    CI.q20=mkBar('c-q20-budget',['Under £50','£50–£100','£100–£250','£250–£500','£500+'],[9.7,7.7,24.6,41.5,16.4],['rgba(6,182,212,0.55)','rgba(81,84,232,0.65)','rgba(109,53,217,0.8)','rgba(79,34,184,0.92)','rgba(232,146,10,0.78)'],{scales:{y:{beginAtZero:true,max:48,grid:{color:CP.bg_grid},ticks:{callback:v=>v+'%',color:'#7060a8',font:{size:9}}},x:{grid:{display:false},ticks:{color:'#7060a8',font:{size:9}}}}});
+
+    // ── Q21: Beta interest (PDF: Yes 61.8%, Maybe 24.6%, No 13.5%)
+    CI.q21=mkChart('c-q21-beta',{type:'pie',data:{labels:['Yes','Maybe','No'],datasets:[{data:[61.8,24.6,13.5],backgroundColor:['rgba(14,164,105,0.9)','rgba(232,146,10,0.75)','rgba(224,59,59,0.6)'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:10},boxWidth:10}}}}});
   }
   if(pid==='financials'){
     CI.revstream=mkStackedBar('c-revstream',['Year 1','Year 2','Year 3'],[
@@ -2554,10 +2744,10 @@ function initCharts(pid){
     CI.clients=mkLine('c-clients',['Month 4','Month 6','Month 8','Month 10','Month 12'],[5,15,35,60,75],'rgba(109,53,217,1)','rgba(109,53,217,0.08)');
   }
   if(pid==='founder'){
-    CI.founderRadar=new Chart(document.getElementById('c-founder-radar').getContext('2d'),{type:'radar',data:{labels:['Technical Depth','Domain Insight','Market Understanding','Product Execution','Business Acumen'],datasets:[{label:'Naveen',data:[92,88,85,87,82],borderColor:'rgba(109,53,217,1)',backgroundColor:'rgba(109,53,217,0.12)',pointBackgroundColor:'rgba(109,53,217,1)',borderWidth:2.5},{label:'Typical Founder',data:[55,45,50,60,55],borderColor:'rgba(232,146,10,0.6)',backgroundColor:'rgba(232,146,10,0.05)',pointBackgroundColor:'rgba(232,146,10,0.8)',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},scales:{r:{grid:{color:'rgba(143,87,240,0.1)'},ticks:{backdropColor:'transparent',color:'#7060a8',font:{size:8}},pointLabels:{color:'#7060a8',font:{size:9}}}}}});
+    CI.founderRadar=mkChart('c-founder-radar',{type:'radar',data:{labels:['Technical Depth','Domain Insight','Market Understanding','Product Execution','Business Acumen'],datasets:[{label:'Naveen',data:[92,88,85,87,82],borderColor:'rgba(109,53,217,1)',backgroundColor:'rgba(109,53,217,0.12)',pointBackgroundColor:'rgba(109,53,217,1)',borderWidth:2.5},{label:'Typical Founder',data:[55,45,50,60,55],borderColor:'rgba(232,146,10,0.6)',backgroundColor:'rgba(232,146,10,0.05)',pointBackgroundColor:'rgba(232,146,10,0.8)',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},scales:{r:{grid:{color:'rgba(143,87,240,0.1)'},ticks:{backdropColor:'transparent',color:'#7060a8',font:{size:8}},pointLabels:{color:'#7060a8',font:{size:9}}}}}});
   }
   if(pid==='moat'){
-    CI.moatRadar=new Chart(document.getElementById('c-moat-radar').getContext('2d'),{type:'radar',data:{labels:['Intent Capture','Outcome Attribution','Failure Forensics','Logic Cloning','UK Benchmarking','Federated Learning','SME Pricing'],datasets:[{label:'PromptOps AI',data:[95,92,90,88,94,87,91],borderColor:'rgba(109,53,217,1)',backgroundColor:'rgba(109,53,217,0.12)',pointBackgroundColor:'rgba(109,53,217,1)',borderWidth:2.5},{label:'OpenAI/Claude Enterprise',data:[70,25,10,20,5,10,15],borderColor:'rgba(232,146,10,0.6)',backgroundColor:'rgba(232,146,10,0.05)',pointBackgroundColor:'rgba(232,146,10,0.8)',borderWidth:2},{label:'Zapier/Make.com',data:[40,15,5,10,5,5,60],borderColor:'rgba(6,182,212,0.6)',backgroundColor:'rgba(6,182,212,0.03)',pointBackgroundColor:'rgba(6,182,212,0.8)',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},scales:{r:{grid:{color:'rgba(143,87,240,0.1)'},ticks:{backdropColor:'transparent',color:'#7060a8',font:{size:7},stepSize:20},pointLabels:{color:'#7060a8',font:{size:8}}}}}});
+    CI.moatRadar=mkChart('c-moat-radar',{type:'radar',data:{labels:['Intent Capture','Outcome Attribution','Failure Forensics','Logic Cloning','UK Benchmarking','Federated Learning','SME Pricing'],datasets:[{label:'PromptOps AI',data:[95,92,90,88,94,87,91],borderColor:'rgba(109,53,217,1)',backgroundColor:'rgba(109,53,217,0.12)',pointBackgroundColor:'rgba(109,53,217,1)',borderWidth:2.5},{label:'OpenAI/Claude Enterprise',data:[70,25,10,20,5,10,15],borderColor:'rgba(232,146,10,0.6)',backgroundColor:'rgba(232,146,10,0.05)',pointBackgroundColor:'rgba(232,146,10,0.8)',borderWidth:2},{label:'Zapier/Make.com',data:[40,15,5,10,5,5,60],borderColor:'rgba(6,182,212,0.6)',backgroundColor:'rgba(6,182,212,0.03)',pointBackgroundColor:'rgba(6,182,212,0.8)',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#7060a8',font:{size:9},boxWidth:10}}},scales:{r:{grid:{color:'rgba(143,87,240,0.1)'},ticks:{backdropColor:'transparent',color:'#7060a8',font:{size:7},stepSize:20},pointLabels:{color:'#7060a8',font:{size:8}}}}}});
   }
 }
 
